@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+
+}
+
+:root {
+    --primary-color: #6c2236;
+    --primary-light: #8d3851;
+    --primary-dark: #4a1825;
+    --light-pink: #f8d7da;
+}
+
+a {
+    text-decoration: none;
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.primary-bg {
+    background-color: var(--primary-color);
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* Navbar */
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Hero */
+
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../images/hero.jpg") center/cover no-repeat;
+
+}
+
+.hero-btn {
+    background-color: #6c2236;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0.9rem 2rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #8b2a45;
+    transform: translateY(-2px);
+}
+
+
+/* popular  */
+
+.country-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    min-height: 260px;
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    /* dark overlay */
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.country-card .card-body {
+    z-index: 2;
+}
+
+.country-card:hover .card-bg {
+    transform: scale(1.1);
+}
+
+.country-card:hover .card-overlay {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.country-card:hover .card-overlay {
+    background: rgba(108, 34, 54, 0.65);
+}
+
+
+
+.hero-heading {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.773), rgba(0, 0, 0, 0.773)),
+        url("../images/heading.jpg") center/cover no-repeat;
+
+}
