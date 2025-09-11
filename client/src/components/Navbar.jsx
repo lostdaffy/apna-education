@@ -9,7 +9,7 @@ const groupedByCountry = universities.reduce((acc, uni) => {
 }, {});
 
 const navbarData = {
-  brand: { logo: "/images/logo.png", link: "/" },
+  brand: { logo: "/images/logo-circle.png", link: "/" },
   desktopMenu: [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -36,12 +36,12 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="sticky top-0 bg-[#242424] py-2 z-50">
+    <nav className="sticky top-0 py-2 z-50 bg-[#88d0d8] shadow-xl">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Brand */}
           <Link to={navbarData.brand.link}>
-            <img src={navbarData.brand.logo} className="w-20" alt="logo" />
+            <img src={navbarData.brand.logo} className="w-25" alt="logo" />
           </Link>
 
           {/* Desktop Menu */}
@@ -51,14 +51,14 @@ const Navbar = () => {
                 <li key={i} className="relative group">
                   {!item.children ? (
                     <Link
-                      className="text-white hover:text-gray-200 transition-colors"
+                      className="text-gray-900 text-[17px] font-semibold hover:text-gray-200 transition-colors"
                       to={item.path}
                     >
                       {item.name}
                     </Link>
                   ) : (
                     <>
-                      <span className="text-white hover:text-gray-200 transition-colors flex items-center cursor-pointer">
+                      <span className="text-gray-900 text-[17px] font-semibold flex items-center cursor-pointer">
                         {item.name}
                         <svg
                           className="w-4 h-4 ml-1"
@@ -132,9 +132,9 @@ const Navbar = () => {
           <div className="hidden lg:block">
             <a
               href={`tel:${navbarData.callNow.phone}`}
-              className="bg-white text-[#242424] font-semibold rounded-full py-2 px-4 hover:bg-gray-100 transition-colors flex items-center"
+              className="bg-gray-900 text-[#4ccedc] font-semibold rounded-full py-4 px-10 hover:bg-gray-700 transition-colors flex items-center"
             >
-              <i className="ri-phone-fill mr-1"></i>
+              <i className="ri-phone-fill mr-2"></i>
               {navbarData.callNow.label}
             </a>
           </div>
