@@ -10,13 +10,32 @@ const UniversityDetails = () => {
   if (!university) {
     return (
       <div className="max-w-4xl mx-auto p-6">
-        <div className="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
-          <h2 className="text-2xl font-bold text-red-600 mb-2">
-            University not found
-          </h2>
-          <p className="text-red-500">
-            The requested university could not be found.
-          </p>
+        <div className="bg-red-50 border-l-4 border-red-400 p-6">
+          <div className="flex">
+            <div className="flex-shrink-0">
+              <svg
+                className="h-8 w-8 text-red-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.19 2.5 1.732 2.5z"
+                />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <h3 className="text-lg font-medium text-red-800">
+                University not found
+              </h3>
+              <div className="mt-2 text-sm text-red-700">
+                <p>The requested university could not be found.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -26,377 +45,327 @@ const UniversityDetails = () => {
     <>
       <HeroSection title={university.name} highlight="" />
 
-      <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-[#242424] mb-3 tracking-tight">
+      <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
             {university.name}
           </h1>
-          <div className="inline-flex items-center px-4 py-2 bg-[#242424] text-white rounded-full text-sm font-medium">
+          <div className="inline-flex items-center px-6 py-3 bg-[#4ccedc] text-white rounded-full text-lg font-semibold shadow-lg">
             {university.type}
           </div>
         </div>
 
         {/* University Image */}
         {university.imageUrl && (
-          <div className="text-center mb-10">
-            <div className="relative inline-block">
-              <img
-                src={university.imageUrl}
-                alt={university.name}
-                className="mx-auto rounded-xl shadow-lg max-h-80 w-auto object-contain border border-gray-200"
-                onError={(e) => {
-                  e.target.style.display = "none";
-                }}
-              />
-            </div>
+          <div className="text-center mb-16">
+            <img
+              src={university.imageUrl}
+              alt={university.name}
+              className="mx-auto rounded-lg shadow-xl w-full max-w-md h-64 object-cover"
+              onError={(e) => (e.target.style.display = "none")}
+            />
           </div>
         )}
 
-        <div className="grid lg:grid-cols-1 gap-8">
-          {/* Main Content */}
-          <div className="space-y-8">
-            {/* General Information */}
-            <div className="bg-white rounded-xl border border-gray-100 overflow-hidden">
-              <div className="bg-[#242424] px-6 py-4">
-                <h2 className="text-xl font-semibold text-white">
-                  General Information
-                </h2>
+        <div className="space-y-16">
+          {/* General Info */}
+          <section>
+            <div className="border-l-4 border-[#4ccedc] pl-6 mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                General Information
+              </h2>
+              <p className="text-gray-600">
+                Basic details about the university
+              </p>
+            </div>
+            <div className="bg-gray-50 p-8 rounded-lg grid md:grid-cols-3 gap-8">
+              <div>
+                <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                  University Type
+                </dt>
+                <dd className="text-xl font-semibold text-gray-900">
+                  {university.type}
+                </dd>
               </div>
-              <div className="p-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-500 mb-1">
-                        University Type
-                      </label>
-                      <p className="text-[#242424] font-medium">
-                        {university.type}
-                      </p>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-500 mb-1">
-                        Established
-                      </label>
-                      <p className="text-[#242424] font-medium">
-                        {university.established}
-                      </p>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-500 mb-1">
-                        Established
-                      </label>
-                      <p className="text-[#242424] font-medium">
-                        {university.students}
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-500 mb-1">
-                      Accreditation
-                    </label>
-                    <div className="flex flex-wrap gap-2">
-                      {university.accreditation?.map((acc, i) => (
-                        <span
-                          key={i}
-                          className="px-3 py-1 bg-gray-100 text-[#242424] text-sm rounded-full"
-                        >
-                          {acc}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+              <div>
+                <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                  Established
+                </dt>
+                <dd className="text-xl font-semibold text-gray-900">
+                  {university.established}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                  Students
+                </dt>
+                <dd className="text-xl font-semibold text-gray-900">
+                  {university.students}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                  Country
+                </dt>
+                <dd className="text-xl font-semibold text-gray-900">
+                  {university.address?.country || "-"}
+                </dd>
               </div>
             </div>
 
-            {/* Programs & Facilities Container */}
-            <div className="space-y-6">
-              {/* Academic Programs */}
-              <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
-                <div className="bg-gradient-to-r from-[#242424] to-[#383838] px-6 py-5">
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-semibold text-white flex items-center gap-2">
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+            {/* Accreditation */}
+            {university.accreditation &&
+              university.accreditation.length > 0 && (
+                <div className="mt-8 pt-8 border-t border-gray-200">
+                  <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-4">
+                    Accreditation
+                  </dt>
+                  <dd className="flex flex-wrap gap-3">
+                    {university.accreditation.map((acc, i) => (
+                      <span
+                        key={i}
+                        className="px-4 py-2 bg-[#4ccedc] text-white text-sm font-medium rounded-full"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                        />
-                      </svg>
-                      Academic Programs
-                    </h2>
-                  </div>
+                        {acc || "-"}
+                      </span>
+                    ))}
+                  </dd>
                 </div>
+              )}
+          </section>
 
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead className="bg-gray-50">
-                      <tr>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                          Level
-                        </th>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                          Program
-                        </th>
-                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                          Duration
-                        </th>
+          {/* Academic Programs */}
+          <section>
+            <div className="border-l-4 border-[#4ccedc] pl-6 mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                Academic Programs
+              </h2>
+              <p className="text-gray-600">
+                Available degree programs and courses
+              </p>
+            </div>
+            {university.programs && university.programs.length > 0 ? (
+              <div className="overflow-hidden">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead>
+                    <tr className="bg-gray-50">
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 uppercase tracking-wider">
+                        Level
+                      </th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 uppercase tracking-wider">
+                        Program Name
+                      </th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 uppercase tracking-wider">
+                        Duration
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    {university.programs.map((p, i) => (
+                      <tr
+                        key={i}
+                        className="hover:bg-gray-50 transition-colors duration-200"
+                      >
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <span
+                            className={`px-3 py-1 text-xs font-semibold rounded-full ${
+                              p.level === "Bachelor"
+                                ? "bg-blue-100 text-blue-800"
+                                : p.level === "Master"
+                                ? "bg-green-100 text-green-800"
+                                : p.level === "PhD"
+                                ? "bg-purple-100 text-purple-800"
+                                : "bg-gray-100 text-gray-800"
+                            }`}
+                          >
+                            {p.level || "-"}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4">{p.name || "-"}</td>
+                        <td className="px-6 py-4">
+                          {p.durationYears
+                            ? `${p.durationYears} ${
+                                p.durationYears === 1 ? "year" : "years"
+                              }`
+                            : "-"}
+                        </td>
                       </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-100">
-                      {university.programs?.map((p, i) => (
-                        <tr
-                          key={i}
-                          className="hover:bg-gray-50 transition-all duration-200 hover:shadow-sm"
-                        >
-                          <td className="px-6 py-4 whitespace-nowrap">
-                            <span
-                              className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                                p.level === "Bachelor"
-                                  ? "bg-blue-100 text-blue-800"
-                                  : p.level === "Master"
-                                  ? "bg-green-100 text-green-800"
-                                  : p.level === "PhD"
-                                  ? "bg-purple-100 text-purple-800"
-                                  : "bg-gray-100 text-gray-800"
-                              }`}
-                            >
-                              {p.level}
-                            </span>
-                          </td>
-                          <td className="px-6 py-4">
-                            <div className="text-[#242424] font-semibold text-sm">
-                              {p.name}
-                            </div>
-                          </td>
-                          <td className="px-6 py-4">
-                            <div className="flex items-center gap-1 text-gray-600 text-sm">
-                              <svg
-                                className="w-4 h-4"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                />
-                              </svg>
-                              {p.durationYears}{" "}
-                              {p.durationYears === 1 ? "year" : "years"}
-                            </div>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : (
+              <div className="text-center py-12 bg-gray-50 rounded-lg">
+                <p className="mt-4 text-gray-500">
+                  No programs available at this time
+                </p>
+              </div>
+            )}
+          </section>
 
-                {/* Empty state if no programs */}
-                {(!university.programs || university.programs.length === 0) && (
-                  <div className="px-6 py-12 text-center">
-                    <div className="text-gray-400 mb-2">
-                      <svg
-                        className="mx-auto h-12 w-12"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-gray-500 text-sm">
-                      No programs available at this time
+          {/* Facilities & Campus Facilities */}
+          {["facility", "facilities"].map(
+            (key) =>
+              university[key] && (
+                <section key={key}>
+                  <div className="border-l-4 border-[#4ccedc] pl-6 mb-8">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                      {key === "facility" ? "Facilities" : "Campus Facilities"}
+                    </h2>
+                    <p className="text-gray-600">
+                      {key === "facility"
+                        ? "University infrastructure and amenities"
+                        : "Available facilities on campus"}
                     </p>
+                  </div>
+
+                  <div className="bg-gray-50 p-8 rounded-lg">
+                    {Array.isArray(university[key]) &&
+                    university[key].length > 0 ? (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {university[key].map((item, i) =>
+                          typeof item === "string" ? (
+                            <div
+                              key={i}
+                              className="flex items-center space-x-3"
+                            >
+                              <div className="w-2 h-2 bg-[#4ccedc] rounded-full flex-shrink-0"></div>
+                              <span className="text-gray-900 font-medium">
+                                {item}
+                              </span>
+                            </div>
+                          ) : (
+                            <div key={i} className="flex items-start space-x-3">
+                              <div className="flex-shrink-0">
+                                <svg
+                                  className="h-6 w-6 text-[#4ccedc]"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M5 13l4 4L19 7"
+                                  />
+                                </svg>
+                              </div>
+                              <div>
+                                <h3 className="font-semibold text-gray-900">
+                                  {item.name || "-"}
+                                </h3>
+                                {item.description && (
+                                  <p className="text-gray-600 text-sm mt-1">
+                                    {item.description}
+                                  </p>
+                                )}
+                              </div>
+                            </div>
+                          )
+                        )}
+                      </div>
+                    ) : (
+                      <p className="text-gray-500">No information available</p>
+                    )}
+                  </div>
+                </section>
+              )
+          )}
+
+          {/* Admissions */}
+          {university.admissions && (
+            <section>
+              <div className="border-l-4 border-[#4ccedc] pl-6 mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                  Admissions
+                </h2>
+                <p className="text-gray-600">
+                  Application requirements and timeline
+                </p>
+              </div>
+              <div className="bg-gray-50 p-8 rounded-lg space-y-8">
+                {university.admissions.requirements && (
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                      Requirements
+                    </h3>
+                    <ul className="list-disc list-inside text-gray-700">
+                      {university.admissions.requirements.map((req, i) => (
+                        <li key={i}>{req || "-"}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {university.admissions.applicationWindow && (
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                      Application Window
+                    </h3>
+                    <div className="bg-white p-6 rounded-lg border-l-4 border-[#4ccedc] text-center">
+                      <span className="text-xl font-semibold text-gray-900">
+                        {university.admissions.applicationWindow.start || "-"}
+                      </span>
+                      <span className="mx-4 text-[#4ccedc] text-2xl">→</span>
+                      <span className="text-xl font-semibold text-gray-900">
+                        {university.admissions.applicationWindow.end || "-"}
+                      </span>
+                    </div>
                   </div>
                 )}
               </div>
+            </section>
+          )}
 
-              {/* Facilities */}
-              <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
-                <div className="bg-gradient-to-r from-[#242424] to-[#383838] px-6 py-5">
-                  <h2 className="text-xl font-semibold text-white flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                      />
-                    </svg>
-                    Facilities
-                  </h2>
-                </div>
-
-                <div className="p-6">
-                  {university.facility ? (
-                    <div className="space-y-4">
-                      {/* If facility is a string, display it nicely */}
-                      {typeof university.facility === "string" ? (
-                        <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-[#242424]">
-                          <p className="text-gray-700 leading-relaxed">
-                            {university.facility}
-                          </p>
-                        </div>
-                      ) : (
-                        /* If facility is an array or object, you can map through it */
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                          {Array.isArray(university.facility) ? (
-                            university.facility.map((facility, index) => (
-                              <div
-                                key={index}
-                                className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors"
-                              >
-                                <div className="flex items-start gap-3">
-                                  <div className="p-2 bg-[#242424] rounded-lg">
-                                    <svg
-                                      className="w-4 h-4 text-white"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      viewBox="0 0 24 24"
-                                    >
-                                      <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5 13l4 4L19 7"
-                                      />
-                                    </svg>
-                                  </div>
-                                  <div>
-                                    <h3 className="font-semibold text-[#242424] text-sm">
-                                      {facility.name || facility}
-                                    </h3>
-                                    {facility.description && (
-                                      <p className="text-xs text-gray-600 mt-1">
-                                        {facility.description}
-                                      </p>
-                                    )}
-                                  </div>
-                                </div>
-                              </div>
-                            ))
-                          ) : (
-                            <div className="col-span-full bg-gray-50 rounded-lg p-4">
-                              <p className="text-gray-700">
-                                {university.facility}
-                              </p>
-                            </div>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    /* Empty state for facilities */
-                    <div className="text-center py-12">
-                      <div className="text-gray-400 mb-2">
-                        <svg
-                          className="mx-auto h-12 w-12"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                          />
-                        </svg>
-                      </div>
-                      <p className="text-gray-500 text-sm">
-                        No facility information available
-                      </p>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {/* Campus Facilities */}
-            <div className="bg-white rounded-xl border border-gray-100 overflow-hidden">
-              <div className="bg-[#242424] px-6 py-4">
-                <h2 className="text-xl font-semibold text-white">
-                  Campus Facilities
+          {/* Rankings */}
+          {university.rankings && (
+            <section>
+              <div className="border-l-4 border-[#4ccedc] pl-6 mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                  Rankings
                 </h2>
               </div>
-              <div className="p-6">
-                <div className="grid md:grid-cols-2 gap-3">
-                  {university.facilities?.map((facility, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center p-3 bg-gray-50 rounded-lg"
-                    >
-                      <div className="w-2 h-2 bg-[#242424] rounded-full mr-3"></div>
-                      <span className="text-[#242424]">{facility}</span>
-                    </div>
-                  ))}
+              <div className="bg-gray-50 p-8 rounded-lg grid md:grid-cols-2 gap-8">
+                <div>
+                  <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                    National Ranking
+                  </dt>
+                  <dd className="text-xl font-semibold text-gray-900">
+                    {university.rankings.national || "-"}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                    Global Ranking
+                  </dt>
+                  <dd className="text-xl font-semibold text-gray-900">
+                    {university.rankings.global || "-"}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                    Source
+                  </dt>
+                  <dd className="text-xl font-semibold text-gray-900">
+                    {university.rankings.source || "-"}
+                  </dd>
                 </div>
               </div>
-            </div>
+            </section>
+          )}
 
-            {/* Admissions */}
-            {university.admissions && (
-              <div className="bg-white rounded-xl border border-gray-100 overflow-hidden">
-                <div className="bg-[#242424] px-6 py-4">
-                  <h2 className="text-xl font-semibold text-white">
-                    Admissions
-                  </h2>
-                </div>
-                <div className="p-6 space-y-4">
-                  {university.admissions.requirements && (
-                    <div>
-                      <label className="block text-sm font-medium text-gray-500 mb-2">
-                        Requirements
-                      </label>
-                      <div className="space-y-2">
-                        {university.admissions.requirements.map((req, i) => (
-                          <div key={i} className="flex items-start">
-                            <div className="w-1.5 h-1.5 bg-[#242424] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                            <span className="text-[#242424] text-sm">
-                              {req}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  {university.admissions.applicationWindow && (
-                    <div>
-                      <label className="block text-sm font-medium text-gray-500 mb-2">
-                        Application Window
-                      </label>
-                      <div className="bg-gray-50 p-3 rounded-lg text-center">
-                        <div className="text-[#242424] font-medium">
-                          {university.admissions.applicationWindow.start} →{" "}
-                          {university.admissions.applicationWindow.end}
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
+          {/* Notes */}
+          {university.notes && (
+            <section>
+              <div className="border-l-4 border-[#4ccedc] pl-6 mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">Notes</h2>
               </div>
-            )}
-          </div>
+              <div className="bg-gray-50 p-8 rounded-lg">
+                <p className="text-gray-700">{university.notes}</p>
+              </div>
+            </section>
+          )}
         </div>
       </div>
     </>

@@ -1,0 +1,40 @@
+{
+    id: ",
+    name: "",
+    imageUrl: "",
+    established: "",
+    type: "",
+    accreditation: [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ],
+    address: { country: "" },
+    students:
+      "",
+    facilities: [
+      "",
+      "",
+      "",
+      "",
+      "",
+    ],
+    programs: [
+      { level: "", name: " ", durationYears: },
+    ],
+    facility: [
+      "",
+      "",
+      "",
+      "",
+      "",
+    ],
+    admissions: { requirements: ["", "", ""] },
+    rankings: { national: , global: , source: "" },
+    notes:
+      "",
+  },

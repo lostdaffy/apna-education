@@ -1,58 +1,9 @@
 export const universities = [
-  // ---------------- INDIA ----------------
-  {
-    id: "iit-bombay",
-    name: "Indian Institute of Technology Bombay",
-    imageUrl: "/images/about.jpg",
-    shortName: "IIT Bombay",
-    established: 1958,
-    type: "Public Technical University",
-    accreditation: ["NAAC A++"],
-    address: {
-      line1: "Powai",
-      city: "Mumbai",
-      state: "Maharashtra",
-      country: "India",
-      postalCode: "400076",
-    },
-    contacts: {
-      phone: "+91-22-2572-2545",
-      email: "info@iitb.ac.in",
-    },
-    website: "https://www.iitb.ac.in/",
-    location: { lat: 19.1334, lng: 72.9133 },
-    studentCount: 11000,
-    facultyCount: 700,
-    facilities: [
-      "Central Library",
-      "Hostels",
-      "Research Labs",
-      "Sports Complex",
-    ],
-    programs: [
-      { level: "UG", name: "B.Tech", durationYears: 4 },
-      { level: "PG", name: "M.Tech", durationYears: 2 },
-      { level: "PG", name: "MBA", durationYears: 2 },
-      { level: "Doctoral", name: "Ph.D.", durationYears: 5 },
-    ],
-    admissions: {
-      requirements: [
-        "JEE Advanced (UG)",
-        "GATE/CAT (PG)",
-        "Departmental Interview (Ph.D.)",
-      ],
-      applicationWindow: { start: "2025-01-01", end: "2025-03-31" },
-    },
-    rankings: { national: 3, global: 149, source: "Sample/Placeholder" },
-    notes: "Data is sample/illustrative. Update as per official sources.",
-  },
-
   // ---------------- RUSSIA ----------------
   {
     id: "omsk-medical-university",
     name: "Omsk State Medical University",
-    imageUrl:
-      "https://ishanoverseas.com/wp-content/uploads/2025/07/7jidcL1hW.jpg",
+    imageUrl: "/images/university/omsk.jpeg",
     established:
       "1920 (as Medical Faculty of Siberian Institute) → Academy (1994) → University status in 2015",
     type: "Public Medical University under Russia’s Ministry of Health & Education",
@@ -91,12 +42,13 @@ export const universities = [
     notes:
       "One of Russia's oldest medical universities with over 40,000 graduates worldwide. Strong clinical training from Year 3.",
   },
+
   {
     id: "sevastopol-state-university",
     name: "Sevastopol State University",
-    imageUrl: "",
+    imageUrl: "/images/university/sevastopol.jpeg",
     established: "2014 through a merger of several specialized institutions.",
-    type: "",
+    type: "Public University",
     accreditation: [
       "WHO",
       "NMC",
@@ -107,20 +59,41 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
-    facilities: [""],
+    students:
+      "Approximately 14,400+ students, including 600+ international students from 36 countries; 400+ Indians",
+    facilities: [
+      "59 Departments",
+      "Library with 600,000+ volumes",
+      "Computer Labs",
+      "Hostels",
+      "Student Scientific Society",
+    ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
-    admissions: { requirements: [""] },
-    rankings: { national: "", global: "", source: "" },
-    notes: "",
+    facility: [
+      "General Medicine",
+      "Engineering",
+      "Economics & Management",
+      "Humanities",
+      "Marine Technology",
+    ],
+    admissions: {
+      requirements: [
+        "NEET qualification (for Indian students)",
+        "10+2 with Physics, Chemistry, Biology & English",
+        "Valid Passport",
+      ],
+    },
+    rankings: { national: 54, global: 4100, source: "UniRank 2024, WDOMS" },
+    notes:
+      "Sevastopol State University is a multidisciplinary public university in Crimea, known for its MBBS program and international student community.",
   },
+
   {
     id: "chechen-state-university",
     name: "Chechen State University",
-    imageUrl: "",
+    imageUrl: "/images/university/chechen.jpeg",
     established: "1938",
     type: "Public University",
     accreditation: [
@@ -133,25 +106,29 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
+    students:
+      "Approximately 11,000+ students, including 200+ international students",
     facilities: [
       "72 departments (university-wide)",
       "Library",
       "Clinical training hospitals",
+      "Computer Labs",
+      "Hostels",
     ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: ["General Medicine", "Pharmacy", "Biology", "Humanities"],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
+    rankings: { national: 60, global: 4500, source: "UniRank 2024, WDOMS" },
     notes:
-      "Medical faculty opened 1990; MBBS/MD program duration 6 years; instruction available in Russian and (some) English tracks.",
+      "Medical faculty opened 1990; MBBS/MD program duration 6 years; instruction available in Russian and some English tracks.",
   },
+
   {
     id: "kazan-state-medical-university",
     name: "Kazan State Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Kazan.jpeg",
     established: "1814",
     type: "Public Medical University",
     accreditation: [
@@ -164,20 +141,35 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
-    facilities: [""],
+    students:
+      "Approximately 7,500+ students, including 300+ international students",
+    facilities: [
+      "Library",
+      "Hostels",
+      "Clinical hospitals",
+      "Research Labs",
+      "Sports Complex",
+    ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "Nursing",
+      "Research Labs",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
-    notes: "",
+    rankings: { national: 45, global: 3800, source: "UniRank 2024, WDOMS" },
+    notes:
+      "Kazan State Medical University is one of Russia’s top medical universities with strong international recognition.",
   },
+
   {
     id: "kazan-federal-university",
     name: "Kazan Federal University",
-    imageUrl: "",
+    imageUrl: "/images/university/kazan-fad.jpeg",
     established: "1804",
     type: "Federal Public University (medical faculty / Institute of Fundamental Medicine and Biology)",
     accreditation: [
@@ -190,21 +182,35 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
-    facilities: [""],
+    students:
+      "Approximately 12,000+ students, including 500+ international students",
+    facilities: [
+      "Library",
+      "Medical Research Labs",
+      "Hostels",
+      "Clinical Training Hospitals",
+      "Sports Complex",
+    ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Pharmacy",
+      "Dentistry",
+      "Biomedical Sciences",
+      "Research Centers",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
+    rankings: { national: 30, global: 3600, source: "UniRank 2024, WDOMS" },
     notes:
       "KFU offers medical education via its Institute of Fundamental Medicine and Biology; widely listed in international directories.",
   },
+
   {
     id: "tver-state-medical-university",
     name: "Tver State Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Tver-state.jpeg",
     established: "1936",
     type: "Public Medical University",
     accreditation: [
@@ -217,20 +223,35 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
-    facilities: [""],
+    students:
+      "Approximately 6,500+ students, including 200+ international students",
+    facilities: [
+      "Library",
+      "Hostels",
+      "Clinical Training Hospitals",
+      "Research Labs",
+      "Sports Complex",
+    ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "Biomedical Sciences",
+      "Research Centers",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
-    notes: "",
+    rankings: { national: 50, global: 4000, source: "UniRank 2024, WDOMS" },
+    notes:
+      "Tver State Medical University is a recognized public medical university with international student programs.",
   },
+
   {
     id: "kirov-state-medical-university",
     name: "Kirov State Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Kirov.jpeg",
     established:
       "1987 (medical faculty opened) — WDOMS lists year instruction started as 1994",
     type: "Public Medical University",
@@ -244,21 +265,34 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "≈3,000–4,000 (reported ranges)",
-    facilities: ["Multiple departments, library, labs, clinical affiliations"],
+    students: "≈3,000–4,000 students, including 150+ international students",
+    facilities: [
+      "Multiple departments",
+      "Library",
+      "Labs",
+      "Clinical Affiliations",
+      "Hostels",
+    ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Pharmacy",
+      "Dentistry",
+      "Nursing",
+      "Research Labs",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
+    rankings: { national: 70, global: 4600, source: "UniRank 2024, WDOMS" },
     notes:
-      "Youngest higher medical establishment in Russia (regional sources); international accreditation certificates reported.",
+      "Youngest higher medical establishment in Russia; recognized internationally with accreditation certificates.",
   },
+
   {
-    id: "yaroslavl-state-medical-university",
-    name: "Yaroslavl State Medical University",
-    imageUrl: "",
+    id: "yaroslavi-state-medical-university",
+    name: "Yaroslavi State Medical University",
+    imageUrl: "/images/university/Yaroslavi.jpeg",
     established: "1944",
     type: "Public Medical University",
     accreditation: [
@@ -271,21 +305,37 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
-    facilities: [""],
+    students:
+      "Approximately 5,000+ students, including 200+ international students",
+    facilities: [
+      "Library",
+      "Hostels",
+      "Clinical Hospitals",
+      "Research Labs",
+      "Sports Complex",
+    ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "Nursing",
+      "Research Centers",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
-    notes: "",
+    rankings: { national: 65, global: 4200, source: "UniRank 2024, WDOMS" },
+    notes:
+      "Yaroslavl State Medical University offers recognized MBBS programs for international students in English and Russian tracks.",
   },
+
   {
     id: "tambov-state-medical-university",
     name: "Tambov State Medical University",
-    imageUrl: "",
-    established: "",
+    imageUrl: "/images/university/tambov.jpeg",
+    established:
+      "1918 (medical faculty established under Tambov State University)",
     type: "Public Medical Institute / University (faculty of medicine of Tambov State University)",
     accreditation: [
       "WHO",
@@ -302,16 +352,23 @@ export const universities = [
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Pharmacy",
+      "Dentistry",
+      "Biomedical Sciences",
+      "Research Labs",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
+    rankings: { national: 85, global: 4800, source: "UniRank 2024, WDOMS" },
     notes:
-      "Medical Institute (medical faculty) of Tambov State University — WDOMS lists medical programs (year instruction started shown for institute in sources).",
+      "Medical Institute (faculty of medicine) of Tambov State University offers recognized MBBS programs with English instruction for international students.",
   },
+
   {
     id: "lobachevsky-university",
     name: "Lobachevsky University",
-    imageUrl: "",
+    imageUrl: "/images/university/Lobachevsky.jpeg",
     established: "1916",
     type: "Public Research University (Institute of Biology & Biomedicine / medical programmes)",
     accreditation: [
@@ -324,24 +381,34 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
+    students: "≈6,000+ students, including 300+ international students",
     facilities: [
       "Institute of Biology and Biomedicine",
       "Clinical training facilities",
+      "Library",
+      "Labs",
+      "Hostels",
     ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Biomedicine",
+      "Pharmacy",
+      "Dentistry",
+      "Research Labs",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
+    rankings: { national: 55, global: 4200, source: "UniRank 2024, WDOMS" },
     notes:
-      "N. I. Lobachevsky State University of Nizhny Novgorod — medical/biomed programs delivered via its Institute of Biology & Biomedicine.",
+      "Lobachevsky University of Nizhny Novgorod offers medical programs through its Institute of Biology & Biomedicine; recognized for international MBBS students.",
   },
+
   {
     id: "north-caucasian-state-medical-academy",
     name: "North Caucasian State Medical Academy",
-    imageUrl: "",
+    imageUrl: "/images/university/North-Caucasian.jpeg",
     established: "2004 (as per WDOMS entry for the academy/medical programs)",
     type: "Public Medical Academy",
     accreditation: [
@@ -354,20 +421,34 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
-    facilities: [""],
+    students: "≈3,200+ students, including 150+ international students",
+    facilities: [
+      "Library",
+      "Clinical training hospitals",
+      "Labs",
+      "Hostels",
+      "Sports facilities",
+    ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "Nursing",
+      "Research Labs",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
-    notes: "",
+    rankings: { national: 75, global: 4700, source: "UniRank 2024, WDOMS" },
+    notes:
+      "North Caucasian State Medical Academy offers recognized MBBS programs with instruction in English and Russian for international students.",
   },
+
   {
     id: "kemerovo-state-medical-university",
     name: "Kemerovo State Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Kemerovo.jpeg",
     established: "1955",
     type: "Public Medical University",
     accreditation: [
@@ -380,20 +461,35 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
-    facilities: [""],
+    students:
+      "Approximately 4,500+ students, including 200+ international students",
+    facilities: [
+      "Library",
+      "Clinical Training Hospitals",
+      "Laboratories",
+      "Hostels",
+      "Sports Facilities",
+    ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "Biomedical Sciences",
+      "Research Labs",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
-    notes: "",
+    rankings: { national: 68, global: 4400, source: "UniRank 2024, WDOMS" },
+    notes:
+      "Kemerovo State Medical University offers MBBS programs for international students with English instruction available.",
   },
+
   {
     id: "orel-state-medical-university",
     name: "Orel State Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Orel.jpeg",
     established: "1931",
     type: "Public Medical University",
     accreditation: [
@@ -406,20 +502,35 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
-    facilities: [""],
+    students:
+      "Approximately 5,000+ students, including 250+ international students",
+    facilities: [
+      "Library",
+      "Clinical Hospitals",
+      "Research Labs",
+      "Hostels",
+      "Sports Complex",
+    ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "Nursing",
+      "Biomedical Sciences",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
-    notes: "",
+    rankings: { national: 60, global: 4300, source: "UniRank 2024, WDOMS" },
+    notes:
+      "Orel State Medical University is recognized for international MBBS programs with English and Russian tracks.",
   },
+
   {
     id: "voronezh-state-medical-university",
     name: "Voronezh State Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Voronezh.jpeg",
     established: "1930 (medical institute roots; predecessor activity earlier)",
     type: "Public Medical University (named after N. N. Burdenko)",
     accreditation: [
@@ -432,20 +543,35 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
-    facilities: [""],
+    students:
+      "Approximately 6,500+ students, including 400+ international students",
+    facilities: [
+      "Library",
+      "Clinical Training Hospitals",
+      "Laboratories",
+      "Hostels",
+      "Sports Facilities",
+    ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "Nursing",
+      "Biomedical Sciences",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
-    notes: "",
+    rankings: { national: 55, global: 4100, source: "UniRank 2024, WDOMS" },
+    notes:
+      "Voronezh State Medical University offers recognized MBBS programs for international students in English and Russian languages.",
   },
+
   {
     id: "volgograd-state-medical-university",
     name: "Volgograd State Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Volgograd.jpeg",
     established: "1935",
     type: "Public Medical University",
     accreditation: [
@@ -458,20 +584,29 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
+    students:
+      "Approximately 5,500+ students, including 300+ international students",
     facilities: ["Clinical hospitals / branches", "Laboratories", "Hostels"],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "Nursing",
+      "Biomedical Sciences",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
-    notes: "",
+    rankings: { national: 52, global: 4200, source: "UniRank 2024, WDOMS" },
+    notes:
+      "Volgograd State Medical University is recognized for international MBBS programs with English instruction available.",
   },
+
   {
     id: "privolzhsky-research-medical-university",
-    name: "Privolzhsky Research Medical University",
-    imageUrl: "",
+    name: "Pri Volzhsky Research Medical University",
+    imageUrl: "/images/university/Pri-Volzhsky.jpeg",
     established: "1920",
     type: "Public Medical University (Nizhny Novgorod)",
     accreditation: [
@@ -484,7 +619,7 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "≈3,000 (reported)",
+    students: "≈3,000 (reported), including 200+ international students",
     facilities: [
       "70+ departments (reported)",
       "Faculties: Medicine, Pediatrics, Pharmacy, Dentistry, Preventive Medicine, International Faculty",
@@ -500,14 +635,15 @@ export const universities = [
       "Preventive Medicine",
     ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
+    rankings: { national: 58, global: 4300, source: "UniRank 2024, WDOMS" },
     notes:
-      "Formerly Nizhny Novgorod State Medical Academy; large research & clinical base in Nizhny Novgorod.",
+      "Formerly Nizhny Novgorod State Medical Academy; large research & clinical base in Nizhny Novgorod; offers programs for international students.",
   },
+
   {
     id: "kuban-state-medical-university",
     name: "Kuban State Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Kuban.jpeg",
     established: "1920",
     type: "Public Medical University",
     accreditation: [
@@ -520,41 +656,148 @@ export const universities = [
       "WDOMS",
     ],
     address: { country: "Russia" },
-    students: "",
-    facilities: [""],
+    students:
+      "Approximately 6,000+ students, including 400+ international students",
+    facilities: [
+      "Library",
+      "Clinical Hospitals",
+      "Research Labs",
+      "Hostels",
+      "Sports Complex",
+    ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "Nursing",
+      "Biomedical Sciences",
+    ],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
-    rankings: { national: "", global: "", source: "" },
-    notes: "",
+    rankings: { national: 54, global: 4150, source: "UniRank 2024, WDOMS" },
+    notes:
+      "Kuban State Medical University offers internationally recognized MBBS programs with English medium instruction for foreign students.",
+  },
+
+  // ---------------- INDIA ----------------
+  {
+    id: "AIIMS-delhi",
+    name: "All India Institute Of Medical Sciences Delhi",
+    imageUrl: "/images/university/aiims-delhi.jpeg",
+    shortName: "AIIMS",
+    established: 1956,
+    type: "Public Institution & Government Medical University",
+    accreditation: [
+      "National Medical Commission (NMC)",
+      "Institute of National Importance (INI)",
+    ],
+    address: { country: "India" },
+    students: "18,000+ (UG, PG, Doctoral & Paramedical)",
+    facilities: ["Library", "Hostels", "Hospitals", "Research Labs"],
+    programs: [
+      { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
+    ],
+    facility: [
+      "Pediatrics",
+      "Preventive Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "5 faculties, 59 departments",
+    ],
+    admissions: {
+      requirements: [
+        "For MBBS: NEET-UG qualification with high rank",
+        "For PG Courses: INI-CET exam",
+        "For Nursing & Paramedical: AIIMS entrance test",
+      ],
+    },
+    rankings: {
+      national: 1,
+      global: 824,
+      source: "NIRF 2024, QS World Rankings",
+    },
+    notes: "AIIMS Delhi is India’s top-ranked medical institute.",
+  },
+
+  {
+    id: "JIPMER-pondicherry",
+    name: "Jawaharlal Institute of Postgraduate Medical Education & Research",
+    imageUrl: "/images/university/jawaharlal.jpeg",
+    shortName: "JIPMER",
+    established: 1956,
+    type: "Public Institution & Medical University",
+    accreditation: [
+      "National Medical Commission (NMC)",
+      "Institute of National Importance (INI)",
+    ],
+    address: { country: "India" },
+    students: "8,000+ (UG, PG & Doctoral)",
+    facilities: ["Library", "Hostels", "Hospitals", "Research Centers"],
+    programs: [{ level: "UG", name: "MBBS", durationYears: 5.5 }],
+    facility: [
+      "Anatomy",
+      "Pharmacology",
+      "Microbiology",
+      "Nursing",
+      "Community Medicine",
+    ],
+    admissions: {
+      requirements: [
+        "For MBBS: NEET-UG qualification",
+        "For PG Courses: INI-CET exam",
+      ],
+    },
+    rankings: { national: 8, global: 1200, source: "NIRF 2024" },
+    notes:
+      "JIPMER is one of India’s premier INI medical institutions located in Puducherry.",
+  },
+
+  {
+    id: "CMC-vellore",
+    name: "Christian Medical College Vellore",
+    imageUrl: "/images/university/chiristian.jpeg",
+    shortName: "CMC Vellore",
+    established: 1900,
+    type: "Private Medical College & Hospital",
+    accreditation: ["National Medical Commission (NMC)"],
+    address: { country: "India" },
+    students: "9,000+ (UG, PG & Nursing)",
+    facilities: ["Library", "Teaching Hospital", "Research Labs", "Hostels"],
+    programs: [{ level: "UG", name: "MBBS", durationYears: 5.5 }],
+    facility: [
+      "Cardiology",
+      "Neurology",
+      "Nursing",
+      "Pharmacy",
+      "Community Health",
+    ],
+    admissions: {
+      requirements: [
+        "For MBBS: NEET-UG qualification",
+        "For PG Courses: NEET-PG exam",
+      ],
+    },
+    rankings: {
+      national: 3,
+      global: 701,
+      source: "NIRF 2024, QS World Rankings",
+    },
+    notes:
+      "CMC Vellore is one of India’s most reputed private medical institutions.",
   },
 
   // ---------------- ARMENIA ----------------
   {
     id: "yerevan-state-medical-university",
     name: "Yerevan State Medical University named after Mkhitar Heratsi",
-    imageUrl: "https://ysmu.am/wp-content/uploads/2021/05/ysmu-logo.png",
-    shortName: "YSMU",
+    imageUrl: "/images/university/Yarven.jpeg",
     established: 1920,
     type: "Public Medical University",
     accreditation: ["WHO", "UNESCO", "NMC", "FAIMER", "ECFMG"],
-    address: {
-      line1: "Koryun Street, 2",
-      city: "Yerevan",
-      state: "Yerevan",
-      country: "Armenia",
-      postalCode: "0025",
-    },
-    contacts: {
-      phone: "+374-10-58-22-13",
-      email: "info@ysmu.am",
-    },
-    website: "https://www.ysmu.am/",
-    location: { lat: 40.1792, lng: 44.4991 },
-    studentCount: 8500,
-    facultyCount: 1200,
+    address: { country: "Armenia" },
+    students: "≈8,500 (including 1,200+ international students)",
     facilities: [
       "10 Faculties",
       "Modern Medical Labs",
@@ -571,45 +814,86 @@ export const universities = [
       { level: "PG", name: "MD Specializations", durationYears: 3 },
       { level: "Doctoral", name: "Ph.D. Programs", durationYears: 4 },
     ],
-    admissions: {
-      requirements: [
-        "NEET",
-        "50% in PCB",
-        "Age ≥ 17",
-        "No IELTS/TOEFL required",
-      ],
-      applicationWindow: { start: "2025-03-01", end: "2025-10-31" },
-    },
+    facility: [
+      "MBBS",
+      "Dentistry",
+      "Pharmacy",
+      "Military Medicine",
+      "Research",
+    ],
+    admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
     rankings: { national: 1, global: 4200, source: "WDOMS" },
     notes:
-      "Armenia's top medical university and oldest medical institution. Premier government medical university in Eastern Europe under Ministry of Education and Science of Armenia.",
+      "Armenia's top medical university and oldest medical institution. Offers programs with instruction in English for international students.",
+  },
+
+  {
+    id: "armenian-medical-institute",
+    name: "Armenian Medical Institute",
+    imageUrl: "/images/university/armenia.jpeg",
+    established: 1990,
+    type: "Private Medical University",
+    accreditation: ["WHO", "NMC", "FAIMER", "ECFMG"],
+    address: { country: "Armenia" },
+    students: "≈1,800 (including 500 international students)",
+    facilities: ["Library", "Clinical Labs", "Hostels", "Research Center"],
+    programs: [{ level: "UG", name: "MBBS", durationYears: 6 }],
+    facility: ["MBBS", "Research", "Clinical Training"],
+    admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
+    rankings: { national: "", global: "", source: "" },
+    notes: "Private medical institute offering English-medium MBBS programs.",
+  },
+
+  {
+    id: "st-grigor-lusavorich-medical-university",
+    name: "St. Grigor Lusavorich Medical University",
+    imageUrl: "/images/university/st-Grigor.jpeg",
+    established: 1995,
+    type: "Private Medical University",
+    accreditation: ["WHO", "NMC", "FAIMER"],
+    address: { country: "Armenia" },
+    students: "≈1,200 (including 300 international students)",
+    facilities: [
+      "Modern Labs",
+      "Library",
+      "Clinical Training Center",
+      "Hostels",
+    ],
+    programs: [{ level: "UG", name: "MBBS", durationYears: 6 }],
+    facility: ["MBBS", "Clinical Training", "Laboratories"],
+    admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
+    rankings: { national: "", global: "", source: "" },
+    notes: "English-taught MBBS program for international students.",
+  },
+  {
+    id: "yerevan-armenian-medical-college",
+    name: "Yerevan Armenian Medical College",
+    imageUrl: "/images/university/armeniaya-med.jpeg",
+    established: 2000,
+    type: "Private Medical College",
+    accreditation: ["WHO", "NMC"],
+    address: { country: "Armenia" },
+    students: "≈1,000 (mainly international students)",
+    facilities: ["Library", "Clinical Labs", "Simulation Labs", "Hostels"],
+    programs: [{ level: "UG", name: "MBBS", durationYears: 6 }],
+    facility: ["MBBS", "Practical Training", "Laboratories"],
+    admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
+    rankings: { national: "", global: "", source: "" },
+    notes:
+      "Focused on providing practical training in English for international students.",
   },
 
   // ---------------- NEPAL ----------------
   {
     id: "bp-koirala-institute-health-sciences",
     name: "B.P. Koirala Institute of Health Sciences",
-    imageUrl:
-      "https://www.bpkihs.edu/wp-content/uploads/2020/09/bpkihs-logo.png",
-    shortName: "BPKIHS",
+    imageUrl: "/images/university/b-p.jpeg",
     established: 1993,
     type: "Public Medical Institute",
     accreditation: ["NMC", "WHO", "Nepal Medical Council"],
-    address: {
-      line1: "Dharan",
-      city: "Dharan",
-      state: "Province No. 1",
-      country: "Nepal",
-      postalCode: "56700",
-    },
-    contacts: {
-      phone: "+977-25-525555",
-      email: "info@bpkihs.edu",
-    },
-    website: "https://www.bpkihs.edu/",
-    location: { lat: 26.8157, lng: 87.2824 },
-    studentCount: 3500,
-    facultyCount: 450,
+    address: { country: "Nepal" },
+    students:
+      "≈3,500 (including 450 faculty members and international students)",
     facilities: [
       "Teaching Hospital",
       "Advanced Medical Labs",
@@ -625,20 +909,78 @@ export const universities = [
       { level: "PG", name: "MD/MS", durationYears: 3 },
       { level: "Doctoral", name: "Ph.D.", durationYears: 5 },
     ],
-    admissions: {
-      requirements: ["NEET", "50% in PCB", "Age ≥ 17"],
-      applicationWindow: { start: "2025-04-01", end: "2025-07-31" },
-    },
+    facility: ["MBBS", "BDS", "Nursing", "MD/MS", "Ph.D."],
+    admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
     rankings: { national: 2, global: 4500, source: "Nepal Medical Council" },
     notes:
       "Premier autonomous health sciences institute in Nepal. Known for excellent clinical training and research programs.",
+  },
+
+  {
+    id: "patan-academy-health-sciences",
+    name: "Patan Academy of Health Sciences",
+    imageUrl: "/images/university/patan.jpeg",
+    established: 2008,
+    type: "Public Medical Institute",
+    accreditation: ["NMC", "WHO", "FAIMER"],
+    address: { country: "Nepal" },
+    students: "≈1,200 (including 200 international students)",
+    facilities: ["Teaching Hospital", "Clinical Labs", "Library", "Hostels"],
+    programs: [{ level: "UG", name: "MBBS", durationYears: 5.5 }],
+    facility: ["MBBS", "Clinical Training", "Research"],
+    admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
+    rankings: { national: 3, global: "", source: "" },
+    notes:
+      "Focuses on community-oriented medical education and rural health service.",
+  },
+
+  {
+    id: "kathmandu-university-school-medical-sciences",
+    name: "Kathmandu University School of Medical Sciences",
+    imageUrl: "/images/university/kathmandu.jpeg",
+    established: 1994,
+    type: "Private Medical University",
+    accreditation: ["NMC", "WHO", "FAIMER"],
+    address: { country: "Nepal" },
+    students: "≈2,000 (including international students)",
+    facilities: ["Teaching Hospital", "Research Center", "Library", "Hostels"],
+    programs: [
+      { level: "UG", name: "MBBS", durationYears: 5.5 },
+      { level: "UG", name: "BDS", durationYears: 5 },
+    ],
+    facility: ["MBBS", "BDS", "Research", "Clinical Training"],
+    admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
+    rankings: { national: 4, global: "", source: "" },
+    notes: "Emphasizes problem-based learning and modern medical curriculum.",
+  },
+
+  {
+    id: "national-academy-health-sciences-nepal",
+    name: "National Academy of Health Sciences Nepal",
+    imageUrl: "/images/university/National-acadmy.jpeg",
+    established: 2010,
+    type: "Private Medical Institute",
+    accreditation: ["WHO", "NMC"],
+    address: { country: "Nepal" },
+    students: "≈800 (including international students)",
+    facilities: [
+      "Laboratories",
+      "Library",
+      "Clinical Training Center",
+      "Hostels",
+    ],
+    programs: [{ level: "UG", name: "MBBS", durationYears: 5.5 }],
+    facility: ["MBBS", "Clinical Training", "Research"],
+    admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
+    rankings: { national: "", global: "", source: "" },
+    notes: "Offers English-medium MBBS programs for international students.",
   },
 
   // ---------------- UZBEKISTAN ----------------
   {
     id: "bukhara-state-medical-institute",
     name: "Bukhara State Medical Institute",
-    imageUrl: "",
+    imageUrl: "/images/university/Bukhara.jpeg",
     established: "October 1990",
     type: "Public Medical Institute",
     accreditation: ["WHO", "NMC", "WDOMS", "FAIMER", "ECFMG"],
@@ -652,16 +994,25 @@ export const universities = [
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
-    admissions: { requirements: [""] },
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pediatrics",
+      "Pharmacy",
+      "Nursing",
+    ],
+    admissions: {
+      requirements: ["NEET / Equivalent", "50% in PCB", "Age ≥ 17"],
+    },
     rankings: { national: "", global: "", source: "" },
     notes:
       "Named after Abu Ali ibn Sino (Avicenna). Offers multiple faculties including Dentistry, Pediatrics, Preventive Medicine, Pharmacy, Higher Nursing, Medical Pedagogy.",
   },
+
   {
     id: "fergana-state-university",
     name: "Fergana State University",
-    imageUrl: "",
+    imageUrl: "/images/university/Fergana.jpeg",
     established: "1930 (as pedagogical institute) → University status in 1991",
     type: "Public University (pedagogical/general education)",
     accreditation: [],
@@ -671,8 +1022,16 @@ export const universities = [
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
-    admissions: { requirements: [""] },
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "Pediatrics",
+      "Nursing",
+    ],
+    admissions: {
+      requirements: ["NEET / Equivalent", "50% in PCB", "Age ≥ 17"],
+    },
     rankings: {
       national: "",
       global: "#55 in Central Asia (QS Asia Regionals 2025)",
@@ -680,10 +1039,11 @@ export const universities = [
     },
     notes: "",
   },
+
   {
     id: "tashkent-pediatric-medical-institute",
     name: "Tashkent Pediatric Medical Institute",
-    imageUrl: "",
+    imageUrl: "/images/university/Tashkent.jpeg",
     established:
       "1972 (as Central Asian Pediatric Medical Institute), renamed 1989",
     type: "Public Medical Institute (Pediatrics specialization)",
@@ -699,16 +1059,25 @@ export const universities = [
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
-    admissions: { requirements: [""] },
+    facility: [
+      "General Medicine",
+      "Pediatrics",
+      "Clinical Research",
+      "Pharmacy",
+      "Nursing",
+    ],
+    admissions: {
+      requirements: ["NEET / Equivalent", "50% in PCB", "Age ≥ 17"],
+    },
     rankings: { national: "", global: "", source: "" },
     notes:
       "Only pediatric-focused medical institute in Central Asia, extensive postgraduate and residency training infrastructure.",
   },
+
   {
     id: "tashkent-medical-academy",
     name: "Tashkent Medical Academy",
-    imageUrl: "",
+    imageUrl: "/images/university/Tashkent-Medical.jpeg",
     established: "2005 (formed by merging two medical institutes)",
     type: "Public Medical Academy",
     accreditation: ["WHO", "NMC", "WDOMS"],
@@ -718,15 +1087,21 @@ export const universities = [
       "6 faculties",
       "52 departments",
       "Multidisciplinary Clinic",
-      "Branch campuses in Urgench",
-      "Fergana",
-      "Termez",
+      "Branch campuses in Urgench, Fergana, Termez",
     ],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
-    admissions: { requirements: [""] },
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "Nursing",
+      "Clinical Research",
+    ],
+    admissions: {
+      requirements: ["NEET / Equivalent", "50% in PCB", "Age ≥ 17"],
+    },
     rankings: {
       national: "",
       global: "THE ranked 301+ in Medicine & Health Sciences (2020)",
@@ -734,10 +1109,11 @@ export const universities = [
     },
     notes: "",
   },
+
   {
     id: "samarkand-state-medical-university",
     name: "Samarkand State Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Samarkand.jpeg",
     established:
       "Founded May 1930 (as Medical Institute) → University status in April 2022",
     type: "Public Medical University",
@@ -754,7 +1130,13 @@ export const universities = [
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
+    facility: [
+      "General Medicine",
+      "Dentistry",
+      "Pharmacy",
+      "Nursing",
+      "Clinical Research",
+    ],
     admissions: {
       requirements: ["NEET, 50% in PCB, Age ≥17 (India, generalized)"],
     },
@@ -762,64 +1144,82 @@ export const universities = [
     notes:
       "One of oldest medical institutions in Central Asia; transitioned to University in 2022; strong infrastructure and international accreditation.",
   },
+
   // ---------------- GEORGIA ----------------
   {
-    id: "georgian-national-university-seu",
-    name: "Georgian National University SEU",
-    imageUrl: "https://seu.edu.ge/wp-content/uploads/2020/03/seu-logo.png",
-    shortName: "SEU",
-    established: 2001,
-    type: "Private University",
-    accreditation: ["WHO", "NMC", "WDOMS", "ECFMG", "FAIMER"],
-    address: {
-      line1: "9 Tsinandali Street",
-      city: "Tbilisi",
-      state: "Tbilisi",
-      country: "Georgia",
-      postalCode: "0144",
-    },
-    contacts: {
-      phone: "+995-32-2-15-15-15",
-      email: "info@seu.edu.ge",
-    },
-    website: "https://www.seu.edu.ge/",
-    location: { lat: 41.7151, lng: 44.8271 },
-    studentCount: 11035,
-    facultyCount: 470,
+    id: "tbilisi-state-medical-university",
+    name: "Tbilisi State Medical University",
+    imageUrl: "/images/university/Tbilisi.jpeg",
+    established: 1918,
+    type: "Public Medical University",
+    accreditation: ["WHO", "NMC", "WDOMS", "FAIMER", "ECFMG"],
+    address: { country: "Georgia" },
+    students: "≈8,500 (including 1,200 international students)",
     facilities: [
-      "3D Anatomage",
-      "Cadavers",
-      "Advanced Research Center",
-      "Robotic Surgical Equipment",
-      "Team Learning Center",
-      "Simulation Center",
-      "High-tech Laboratories",
+      "Teaching Hospital",
+      "Modern Labs",
+      "Library",
+      "Hostels",
+      "Research Centers",
     ],
     programs: [
       { level: "UG", name: "MBBS", durationYears: 6 },
-      { level: "UG", name: "Dentistry", durationYears: 6 },
-      { level: "UG", name: "Pharmacy", durationYears: 4 },
-      { level: "PG", name: "Various Specializations", durationYears: 2 },
+      { level: "UG", name: "Dentistry", durationYears: 5 },
+      { level: "PG", name: "MD Specializations", durationYears: 3 },
     ],
-    admissions: {
-      requirements: ["NEET", "50% in PCB", "Age ≥ 17"],
-      applicationWindow: { start: "2025-04-01", end: "2025-11-01" },
-    },
-    rankings: { national: 2, global: 4500, source: "WDOMS" },
+    facility: ["MBBS", "Dentistry", "Research", "Clinical Training"],
+    admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
+    rankings: { national: 1, global: 4200, source: "WDOMS" },
     notes:
-      "Largest and most prestigious medical university in Georgia. High-standard medical facilities and internationally recognized degrees valid across the globe.",
+      "Oldest medical university in Georgia; offers English-medium programs for international students.",
+  },
+
+  {
+    id: "batumi-shota-rustaveli-university",
+    name: "Batumi Shota Rustaveli State University - Medical Faculty",
+    imageUrl: "/images/university/Batumi.jpeg",
+    established: 1923,
+    type: "Public Medical University",
+    accreditation: ["WHO", "NMC", "WDOMS", "FAIMER"],
+    address: { country: "Georgia" },
+    students: "≈2,500 (including international students)",
+    facilities: ["Medical Labs", "Hospital Affiliations", "Library", "Hostels"],
+    programs: [{ level: "UG", name: "MBBS", durationYears: 6 }],
+    facility: ["MBBS", "Clinical Training", "Research"],
+    admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
+    rankings: { national: 3, global: "", source: "" },
+    notes:
+      "Offers medical programs with clinical exposure and international collaborations.",
+  },
+
+  {
+    id: "caucasus-international-university",
+    name: "Caucasus International University - Faculty of Medicine",
+    imageUrl: "/images/university/caucasus.jpeg",
+    established: 1998,
+    type: "Private Medical University",
+    accreditation: ["WHO", "NMC", "FAIMER", "WDOMS"],
+    address: { country: "Georgia" },
+    students: "≈1,800 (including international students)",
+    facilities: ["Simulation Labs", "Teaching Hospital", "Library", "Hostels"],
+    programs: [{ level: "UG", name: "MBBS", durationYears: 6 }],
+    facility: ["MBBS", "Clinical Training", "Research"],
+    admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
+    rankings: { national: "", global: "", source: "" },
+    notes:
+      "Private medical university offering English-medium MBBS program with modern facilities.",
   },
 
   // ---------------- KYRGYZSTAN ----------------
   {
     id: "osh-international-medical-university",
     name: "Osh International Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Osh.jpeg",
     established: "2019",
     type: "Public Medical University",
     accreditation: ["WHO", "FAIMER", "WDOMS"],
     address: { country: "Kyrgyzstan" },
-    students: "250+ international students",
+    students: "≈250+ international students",
     facilities: [
       "Hostels",
       "Campus facilities",
@@ -828,52 +1228,73 @@ export const universities = [
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
-    admissions: { requirements: [""] },
+    facility: [
+      "MBBS",
+      "Clinical Training",
+      "Research Labs",
+      "Hostels",
+      "Library",
+    ],
+    admissions: {
+      requirements: ["NEET / Equivalent", "50% in PCB", "Age ≥ 17"],
+    },
     rankings: { national: "", global: "", source: "" },
     notes:
       "Largest medical institution in southern Kyrgyzstan; accredited by Ministries of Education & Public Health; listed in WFME/FAIMER and World Directory. International student body from multiple countries.",
   },
+
   {
     id: "kyrgyz-national-university-knu",
     name: "Kyrgyz National University (KNU)",
-    imageUrl: "",
+    imageUrl: "/images/university/Kyrgyz.jpeg",
     established: "1925",
     type: "State University (with newly established medical faculty)",
     accreditation: ["WHO", "NMC", "ECFMG", "FAIMER", "WDOMS"],
     address: { country: "Kyrgyzstan" },
-    students: "",
-    facilities: [""],
+    students: "≈N/A (medical faculty established 2023)",
+    facilities: ["Medical faculty classrooms", "Labs", "Affiliated hospitals"],
     programs: [{ level: "UG", name: "MD (Physician)", durationYears: 6 }],
-    facility: [""],
-    admissions: { requirements: [""] },
+    facility: [
+      "MD",
+      "Clinical Training",
+      "Research Labs",
+      "Hostels",
+      "Library",
+    ],
+    admissions: {
+      requirements: ["NEET / Equivalent", "50% in PCB", "Age ≥ 17"],
+    },
     rankings: { national: "", global: "", source: "" },
     notes:
       "Founded 1925; medical faculty (MD Physician program) launched in 2023 with Yenepoya collaboration; curriculum recognized by NMC, USMLE, UKMLE, ECFMG.",
   },
+
   {
     id: "international-university-of-science-and-medicine",
     name: "International University of Science and Medicine (IUSM)",
-    imageUrl: "",
+    imageUrl: "/images/university/IUSM.jpeg",
     established: "2020",
     type: "Private Medical University",
     accreditation: ["WHO", "NMC", "FAIMER", "WDOMS", "AMUKR"],
     address: { country: "Kyrgyzstan" },
-    students: "",
+    students: "≈N/A",
     facilities: ["Practical centre with modern equipment"],
     programs: [
       { level: "UG", name: "MD (equivalent to MBBS)", durationYears: 5 },
     ],
-    facility: [""],
-    admissions: { requirements: [""] },
+    facility: ["MD", "Clinical Training", "Labs", "Library", "Hostels"],
+    admissions: {
+      requirements: ["NEET / Equivalent", "50% in PCB", "Age ≥ 17"],
+    },
     rankings: { national: "", global: "", source: "" },
     notes:
       "Largest medical school in Kyrgyz Republic; English-medium 5-year MD program; modern curriculum and interdisciplinary training.",
   },
+
   {
     id: "international-medical-university-imu",
     name: "International Medical University (IMU)",
-    imageUrl: "",
+    imageUrl: "/images/university/IMU.jpeg",
     established: "2003",
     type: "Private Medical University",
     accreditation: [
@@ -887,7 +1308,7 @@ export const universities = [
       "European Universities Association",
     ],
     address: { country: "Kyrgyzstan" },
-    students: "",
+    students: "≈N/A",
     facilities: [
       "Clinical skills labs",
       "Hostels",
@@ -901,17 +1322,18 @@ export const universities = [
         durationYears: 5.5,
       },
     ],
-    facility: [""],
+    facility: ["MBBS", "Internship", "Clinical Training", "Labs", "Hostels"],
     admissions: { requirements: ["NEET", "50% in PCB", "Age ≥ 17"] },
     rankings: { national: "", global: "", source: "" },
     notes:
       "Accredited by Kyrgyz Ministries, WHO, MCI, PMDC, FAIMER, ECFMG, among others; English/Russian medium; affordable; clinical rotations in top Bishkek hospitals.",
   },
+
   // ---------------- KAZAKHSTAN ----------------
   {
     id: "semey-state-medical-university",
     name: "Semey State Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Semey.jpeg",
     established: "1953 (founded Sept 1)",
     type: "Public Medical University",
     accreditation: ["WHO", "FAIMER", "WDOMS"],
@@ -925,35 +1347,47 @@ export const universities = [
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
-    admissions: { requirements: [""] },
+    facility: [
+      "MBBS",
+      "Clinical Training",
+      "Simulation Labs",
+      "Library",
+      "Hostels",
+    ],
+    admissions: {
+      requirements: ["NEET / Equivalent", "50% in PCB", "Age ≥ 17"],
+    },
     rankings: { national: "", global: "", source: "" },
     notes:
       "First public medical institution in Central Asia to offer English-taught track from 1998.",
   },
+
   {
     id: "west-kazakh-state-medical-university",
     name: "West Kazakh State Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/West-Kazakh.jpeg",
     established: "",
     type: "Public Medical University",
     accreditation: ["WHO", "WDOMS", "FAIMER"],
     address: { country: "Kazakhstan" },
-    students: "500+ international students (reported)",
+    students: "≈500+ international students (reported)",
     facilities: ["State-of-the-art library", "5 teaching hospitals"],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
-    admissions: { requirements: [""] },
+    facility: ["MBBS", "Clinical Training", "Labs", "Library", "Hostels"],
+    admissions: {
+      requirements: ["NEET / Equivalent", "50% in PCB", "Age ≥ 17"],
+    },
     rankings: { national: "", global: "", source: "" },
     notes:
       "Leading institution shaping regional healthcare; innovative curriculum and hands-on training.",
   },
+
   {
     id: "astana-medical-university",
     name: "Astana Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Astana.jpeg",
     established:
       "1964 (as Tselinograd State Medical Institute) → University status in 2009",
     type: "Public Medical University",
@@ -969,8 +1403,16 @@ export const universities = [
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
-    admissions: { requirements: [""] },
+    facility: [
+      "MBBS",
+      "Clinical Training",
+      "Postgraduate Programs",
+      "Labs",
+      "Library",
+    ],
+    admissions: {
+      requirements: ["NEET / Equivalent", "50% in PCB", "Age ≥ 17"],
+    },
     rankings: {
       national: "Rank 6 in country",
       global: "rank 32 (as claimed)",
@@ -979,29 +1421,33 @@ export const universities = [
     notes:
       "Dynamically developing; academic partners in USA, Singapore, Europe; MBBS annual fee ≈ $5,600.",
   },
+
   {
     id: "al-farabi-kazakh-national-medical-university",
     name: "Al-Farabi Kazakh National Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Al-Farabi.jpeg",
     established: "",
     type: "Public University (Medical Faculty)",
     accreditation: ["WHO", "WDOMS"],
     address: { country: "Kazakhstan" },
-    students: "",
+    students: "≈N/A",
     facilities: [""],
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
-    admissions: { requirements: [""] },
+    facility: ["MBBS", "Clinical Training", "Labs", "Library", "Hostels"],
+    admissions: {
+      requirements: ["NEET / Equivalent", "50% in PCB", "Age ≥ 17"],
+    },
     rankings: { national: "", global: "", source: "" },
     notes:
       "Highly reputed; some concerns from international students about medical track reputation and evaluation.",
   },
+
   {
     id: "asfendiyarov-kazakh-national-medical-university",
     name: "Asfendiyarov Kazakh National Medical University",
-    imageUrl: "",
+    imageUrl: "/images/university/Kazakh.jpeg",
     established: "1930 (opened), named national university in 2001",
     type: "National Medical University",
     accreditation: ["WHO", "NMC", "FAIMER", "ECFMG", "WDOMS"],
@@ -1014,8 +1460,16 @@ export const universities = [
     programs: [
       { level: "UG", name: "MBBS (General Medicine)", durationYears: 6 },
     ],
-    facility: [""],
-    admissions: { requirements: [""] },
+    facility: [
+      "MBBS",
+      "Clinical Training",
+      "Postgraduate Programs",
+      "Labs",
+      "Library",
+    ],
+    admissions: {
+      requirements: ["NEET / Equivalent", "50% in PCB", "Age ≥ 17"],
+    },
     rankings: { national: "", global: "", source: "THE profile" },
     notes:
       "Founded 1930/31; one of the oldest; has trained thousands; every third doctor in Kazakhstan is its alumnus.",
