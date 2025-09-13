@@ -17,7 +17,7 @@ const HeroSection = ({ title, highlight }) => {
         <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-start">
           {title}{" "}
           {highlight && (
-            <span className="text-[#242424]">{highlight}</span>
+            <span className="text-[#4ccedc]">{highlight}</span>
           )}
         </h1>
       </div>

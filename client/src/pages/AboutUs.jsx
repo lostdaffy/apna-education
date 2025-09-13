@@ -89,23 +89,23 @@ const About = () => {
               id="overview-text"
             >
               <div className="relative mb-10">
-                <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-                  <span className="text-[#242424]">Who We</span>
-                  <span className="text-gray-600 ml-4">Are</span>
+                <h2 className="text-5xl md:text-6xl lg:text-6xl font-semibold">
+                  <span className="text-gray-900">Who We Are</span>
                 </h2>
-                <div className="absolute -left-8 top-0 w-2 h-full bg-[#242424]"></div>
+                <div className="absolute -left-8 top-0 w-2 h-full bg-[#4ccedc]"></div>
               </div>
 
               <div className="space-y-6 text-gray-700">
-                <p className="text-lg leading-relaxed">
-                  ApnaEducation is a leading educational consultancy
-                  specializing in MBBS admissions for Indian students seeking
-                  quality medical education both in India and abroad. Since our
-                  establishment in 2019, we have been committed to bridging the
-                  gap between aspiring medical students and world-class
-                  educational opportunities.
+                <p className="text-xl leading-relaxed">
+                  <strong className="text-[#4ccedc]">ApnaEducation</strong> is a
+                  leading educational consultancy specializing in MBBS
+                  admissions for Indian students seeking quality medical
+                  education both in India and abroad. Since our establishment in
+                  2019, we have been committed to bridging the gap between
+                  aspiring medical students and world-class educational
+                  opportunities.
                 </p>
-                <p className="leading-relaxed text-gray-600">
+                <p className="text-lg leading-relaxed text-gray-800">
                   Our mission is simple yet powerful: to make international
                   medical education accessible, affordable, and achievable for
                   every deserving student. We understand that pursuing MBBS
@@ -124,7 +124,7 @@ const About = () => {
               id="overview-image"
             >
               <div className="relative">
-                <div className="absolute -inset-4 bg-[#242424] opacity-10"></div>
+                <div className=""></div>
                 <img
                   src="./images/who.jpg"
                   alt="ApnaEducation team"
@@ -136,50 +136,9 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats Bar */}
-      <section className="py-16 bg-gray-50 border-y-2 border-gray-200">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group cursor-pointer">
-                <i
-                  className={`${stat.icon} text-3xl text-gray-600 mb-3 block group-hover:text-[#242424] transition-colors`}
-                ></i>
-                <h3 className="text-3xl font-bold text-[#242424] mb-1">
-                  {stat.number}
-                </h3>
-                <p className="text-gray-600 text-sm uppercase tracking-wider">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Mission & Vision Section */}
-      <section className="py-24 bg-[#242424] relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 border border-gray-600 rounded-full opacity-10"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 border border-gray-600 rounded-full opacity-10"></div>
-        </div>
-
+      <section className="py-24 bg-[#4ccedc44] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div
-            className={`text-center mb-16 animate-on-scroll ${
-              isVisible["mission-header"] ? "visible" : ""
-            }`}
-            id="mission-header"
-          >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Our <span className="text-gray-600">Mission & Vision</span>
-            </h2>
-            <div className="w-32 h-1 bg-gray-600 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Guiding principles that drive everything we do
-            </p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Mission Card */}
             <div
@@ -189,11 +148,11 @@ const About = () => {
               id="mission-card"
             >
               <div className="bg-white h-full p-12 hover:transform hover:scale-105 transition-all duration-500">
-                <div className="border-b-4 border-[#242424] pb-6 mb-8">
-                  <div className="w-20 h-20 bg-[#242424] flex items-center justify-center mb-6">
+                <div className="border-b-4 border-[#4ccedc] pb-6 mb-8">
+                  <div className="w-20 h-20 bg-[#4ccedc] flex items-center justify-center mb-6">
                     <i className="ri-focus-2-line text-white text-3xl"></i>
                   </div>
-                  <h3 className="text-3xl font-bold text-[#242424]">
+                  <h3 className="text-3xl font-bold text-[#4ccedc]">
                     Our Mission
                   </h3>
                 </div>
@@ -216,11 +175,11 @@ const About = () => {
               id="vision-card"
             >
               <div className="bg-white h-full p-12 hover:transform hover:scale-105 transition-all duration-500">
-                <div className="border-b-4 border-gray-600 pb-6 mb-8">
-                  <div className="w-20 h-20 bg-gray-600 flex items-center justify-center mb-6">
+                <div className="border-b-4 border-[#4ccedc] pb-6 mb-8">
+                  <div className="w-20 h-20 bg-[#4ccedc] flex items-center justify-center mb-6">
                     <i className="ri-eye-line text-white text-3xl"></i>
                   </div>
-                  <h3 className="text-3xl font-bold text-[#242424]">
+                  <h3 className="text-3xl font-bold text-[#4ccedc]">
                     Our Vision
                   </h3>
                 </div>
@@ -247,10 +206,10 @@ const About = () => {
             }`}
             id="why-header"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#242424] mb-6">
-              Why Choose <span className="text-gray-600">ApnaEducation</span>
+            <h2 className="text-5xl md:text-6xl lg:text-6xl font-semibold text-gray-900 mb-6">
+              Why Choose Us
             </h2>
-            <div className="w-32 h-1 bg-[#242424] mx-auto mb-6"></div>
+            <div className="w-32 h-1 bg-[#4ccedc] mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               What sets us apart in the competitive world of education
               consultancy
@@ -261,19 +220,16 @@ const About = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`group animate-on-scroll ${
-                  isVisible[`feature-${index}`] ? "visible" : ""
-                }`}
-                id={`feature-${index}`}
+                
               >
-                <div className="h-full bg-white border-2 border-gray-200 p-10 hover:border-[#242424] hover:bg-[#242424] transition-all duration-500">
-                  <div className="w-16 h-16 bg-gray-600 flex items-center justify-center mb-8 group-hover:bg-white transition-colors">
+                <div className="h-full bg-white border-2 border-[#4ccedc] p-10 ">
+                  <div className="w-16 h-16 bg-[#4ccedc] flex items-center justify-center mb-8 group-hover:bg-white transition-colors">
                     <i
-                      className={`${feature.icon} text-white text-2xl group-hover:text-[#242424] transition-colors`}
+                      className={`${feature.icon} text-white text-2xl group-hover:text-[#4ccedc] transition-colors`}
                     ></i>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-[#242424] mb-6 group-hover:text-white transition-colors">
+                  <h3 className="text-2xl font-bold text-[#4ccedc] mb-6 group-hover:text-white transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed group-hover:text-gray-300 transition-colors">

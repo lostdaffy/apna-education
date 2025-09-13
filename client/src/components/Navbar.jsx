@@ -32,7 +32,6 @@ const navbarData = {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
@@ -41,7 +40,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Brand */}
           <Link to={navbarData.brand.link}>
-            <img src={navbarData.brand.logo} className="w-25" alt="logo" />
+            <img src={navbarData.brand.logo} className="w-20" alt="logo" />
           </Link>
 
           {/* Desktop Menu */}
@@ -74,17 +73,18 @@ const Navbar = () => {
                           />
                         </svg>
                       </span>
+
                       {/* 1st-level dropdown (countries) */}
                       <ul
-                        className="absolute left-0 mt-2 w-60 bg-[#242424] rounded-md shadow-xl  
+                        className="absolute left-0 mt-2 w-60 bg-gray-900 rounded-md shadow-xl  
                         opacity-0 invisible group-hover:opacity-100 group-hover:visible
                         transition-all duration-200 z-50"
                       >
                         {item.children.map((country, ci) => (
                           <li key={ci} className="relative group/country">
-                            <div className=" flex items-center justify-between px-6 py-3 text-white  cursor-pointer">
+                            <div className="flex items-center justify-between px-4 py-3 text-white cursor-pointer hover:bg-gray-800 rounded">
                               <Link
-                                className="flex-1 border-b border-gray-500"
+                                className="flex-1"
                                 onClick={(e) => e.stopPropagation()}
                               >
                                 {country.name}
@@ -97,12 +97,12 @@ const Navbar = () => {
                             {/* 2nd-level dropdown (universities) */}
                             {country.children && (
                               <ul
-                                className="absolute left-full top-0 w-80 bg-[#242424] rounded-md shadow-lg border border-[#242424] 
+                                className="absolute left-full top-0 w-80 bg-gray-900 rounded-md shadow-lg border border-gray-800
                                 opacity-0 invisible group-hover/country:opacity-100 group-hover/country:visible 
-                                transition-all duration-200 z-50 max-h-80 overflow-y-auto"
+                                transition-all duration-200 z-50"
                               >
-                                <li className="px-4 py-2 bg-gray-50 border-b">
-                                  <span className="text-sm font-semibold text-gray-700">
+                                <li className="px-4 py-2 border-b border-gray-700">
+                                  <span className="text-sm font-semibold text-gray-200">
                                     Universities in {country.name}
                                   </span>
                                 </li>
@@ -110,7 +110,7 @@ const Navbar = () => {
                                   <li key={ui}>
                                     <Link
                                       to={uni.path}
-                                      className="block px-6 py-3 text-white text-sm"
+                                      className="block px-4 py-2 text-gray-200 hover:text-white hover:bg-gray-800 text-sm"
                                     >
                                       {uni.name}
                                     </Link>
@@ -167,21 +167,21 @@ const Navbar = () => {
             isMenuOpen ? "block opacity-100" : "hidden opacity-0"
           }`}
         >
-          <div className="bg-[#2a2a2a] rounded-lg p-4 border border-gray-600 shadow-xl">
+          <div className="bg-gray-900 rounded-lg p-4 border border-gray-700 shadow-xl">
             <ul className="flex flex-col space-y-2">
               {navbarData.desktopMenu.map((item, i) => (
                 <li key={i}>
                   {!item.children ? (
                     <Link
                       to={item.path}
-                      className="text-white hover:text-gray-200 block py-3 px-3 rounded-lg hover:bg-[#383838] transition-colors"
+                      className="text-white hover:text-gray-200 block py-3 px-3 rounded-lg hover:bg-gray-800 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
                     </Link>
                   ) : (
                     <details className="text-white">
-                      <summary className="cursor-pointer py-3 px-3 hover:text-gray-200 hover:bg-[#383838] rounded-lg transition-colors list-none">
+                      <summary className="cursor-pointer py-3 px-3 hover:text-gray-200 hover:bg-gray-800 rounded-lg transition-colors list-none">
                         <span className="flex items-center justify-between">
                           <span className="font-medium">{item.name}</span>
                           <svg
@@ -199,11 +199,11 @@ const Navbar = () => {
                           </svg>
                         </span>
                       </summary>
-                      <ul className="mt-2 space-y-1 bg-[#1a1a1a] rounded-lg p-2 border border-gray-700">
+                      <ul className="mt-2 space-y-1 bg-gray-800 rounded-lg p-2 border border-gray-700">
                         {item.children.map((country, ci) => (
                           <li key={ci}>
                             <details>
-                              <summary className="cursor-pointer py-2 px-3 text-gray-300 hover:text-white hover:bg-[#383838] rounded transition-colors list-none">
+                              <summary className="cursor-pointer py-2 px-3 text-gray-300 hover:text-white hover:bg-gray-700 rounded transition-colors list-none">
                                 <span className="flex items-center justify-between">
                                   <span>{country.name}</span>
                                   <svg
@@ -221,16 +221,16 @@ const Navbar = () => {
                                   </svg>
                                 </span>
                               </summary>
-                              <ul className="mt-1 space-y-1 max-h-40 overflow-y-auto bg-[#0f0f0f] rounded p-2 border border-gray-800">
+                              <ul className="mt-1 space-y-1 bg-gray-700 rounded p-2 border border-gray-700">
                                 {country.children.map((uni, ui) => (
                                   <li key={ui}>
                                     <Link
                                       to={uni.path}
-                                      className=" py-2 px-3 text-gray-400 hover:text-white hover:bg-[#383838] transition-colors text-sm rounded flex items-center"
+                                      className="py-2 px-3 text-gray-200 hover:text-white hover:bg-gray-800 transition-colors text-sm rounded flex items-center"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       <svg
-                                        className="w-3 h-3 mr-2 text-gray-600"
+                                        className="w-3 h-3 mr-2 text-gray-400"
                                         fill="currentColor"
                                         viewBox="0 0 20 20"
                                       >
@@ -255,10 +255,10 @@ const Navbar = () => {
               ))}
 
               {/* Mobile Call Now Button */}
-              <li className="pt-4 border-t border-gray-600">
+              <li className="pt-4 border-t border-gray-700">
                 <a
                   href={`tel:${navbarData.callNow.phone}`}
-                  className="bg-white text-[#242424] font-semibold rounded-lg py-3 px-4 hover:bg-gray-100 transition-colors flex items-center justify-center w-full"
+                  className="bg-[#4ccedc] text-gray-900 font-semibold rounded-lg py-3 px-4 hover:bg-teal-400 transition-colors flex items-center justify-center w-full"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <i className="ri-phone-fill mr-2"></i>
