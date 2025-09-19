@@ -27,7 +27,7 @@ const navbarData = {
     },
     { name: "Contact", path: "/contact" },
   ],
-  callNow: { label: "Call Now", phone: "+919667601325" },
+  callNow: { label: "Contact Us", phone: "+919667601325" },
 };
 
 const Navbar = () => {

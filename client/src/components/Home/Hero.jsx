@@ -86,19 +86,20 @@ const Hero = () => {
                       {slide.subtitle}
                     </h2>
 
-                    <div className="mt-8 sm:mt-10 lg:mt-20 gap-5 flex">
+                    <div className="mt-8 sm:mt-10 lg:mt-20 gap-5 flex flex-col sm:flex-row  w-full">
                       <Link
                         to="/contact"
-                        className="bg-gray-900 text-[#4ccedc] font-semibold text-base sm:text-lg md:text-xl rounded-full py-3 sm:py-4 px-6 sm:px-10 transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/30 animate-slideInUp delay-700 group inline-block"
+                        className="w-full sm:w-auto text-center bg-gray-900 text-[#4ccedc] font-semibold text-sm sm:text-base rounded-full py-3 sm:py-3 px-6 sm:px-10 transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/30 animate-slideInUp delay-700 group inline-flex items-center justify-center"
                       >
                         <i className="ri-graduation-cap-line me-2"></i> Book Now
                       </Link>
+
                       <Link
                         to="tel:919667601325"
-                        className="bg-gray-900 text-[#4ccedc] font-semibold rounded-full py-4 px-10 hover:bg-gray-700 transition-colors flex items-center"
+                        className="w-full sm:w-auto text-center bg-gray-900 text-[#4ccedc] font-semibold rounded-full py-3 sm:py-3 px-6 sm:px-10 hover:bg-gray-700 transition-colors flex items-center justify-center"
                       >
                         <i className="ri-phone-fill mr-2"></i>
-                        +91 9667601325
+                        Call Now
                       </Link>
                     </div>
                   </div>
