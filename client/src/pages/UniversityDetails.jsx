@@ -51,7 +51,7 @@ const UniversityDetails = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
             {university.name}
           </h1>
-          <div className="inline-flex items-center px-6 py-3 bg-[#4ccedc] text-white rounded-full text-lg font-semibold shadow-lg">
+          <div className="inline-flex items-center px-6 py-3 bg-[#1e73be] text-white rounded-full text-lg font-semibold shadow-lg">
             {university.type}
           </div>
         </div>
@@ -71,7 +71,7 @@ const UniversityDetails = () => {
         <div className="space-y-16">
           {/* General Info */}
           <section>
-            <div className="border-l-4 border-[#4ccedc] pl-6 mb-8">
+            <div className="border-l-4 border-[#1e73be] pl-6 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-2">
                 General Information
               </h2>
@@ -81,7 +81,7 @@ const UniversityDetails = () => {
             </div>
             <div className="bg-gray-50 p-8 rounded-lg grid md:grid-cols-3 gap-8">
               <div>
-                <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                <dt className="text-sm font-medium text-[#1e73be] uppercase tracking-wider mb-2">
                   University Type
                 </dt>
                 <dd className="text-xl font-semibold text-gray-900">
@@ -89,7 +89,7 @@ const UniversityDetails = () => {
                 </dd>
               </div>
               <div>
-                <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                <dt className="text-sm font-medium text-[#1e73be] uppercase tracking-wider mb-2">
                   Established
                 </dt>
                 <dd className="text-xl font-semibold text-gray-900">
@@ -97,7 +97,7 @@ const UniversityDetails = () => {
                 </dd>
               </div>
               <div>
-                <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                <dt className="text-sm font-medium text-[#1e73be] uppercase tracking-wider mb-2">
                   Students
                 </dt>
                 <dd className="text-xl font-semibold text-gray-900">
@@ -105,7 +105,7 @@ const UniversityDetails = () => {
                 </dd>
               </div>
               <div>
-                <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                <dt className="text-sm font-medium text-[#1e73be] uppercase tracking-wider mb-2">
                   Country
                 </dt>
                 <dd className="text-xl font-semibold text-gray-900">
@@ -118,14 +118,14 @@ const UniversityDetails = () => {
             {university.accreditation &&
               university.accreditation.length > 0 && (
                 <div className="mt-8 pt-8 border-t border-gray-200">
-                  <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-4">
+                  <dt className="text-sm font-medium text-[#1e73be] uppercase tracking-wider mb-4">
                     Accreditation
                   </dt>
                   <dd className="flex flex-wrap gap-3">
                     {university.accreditation.map((acc, i) => (
                       <span
                         key={i}
-                        className="px-4 py-2 bg-[#4ccedc] text-white text-sm font-medium rounded-full"
+                        className="px-4 py-2 bg-[#1e73be] text-white text-sm font-medium rounded-full"
                       >
                         {acc || "-"}
                       </span>
@@ -137,7 +137,7 @@ const UniversityDetails = () => {
 
           {/* Academic Programs */}
           <section>
-            <div className="border-l-4 border-[#4ccedc] pl-6 mb-8">
+            <div className="border-l-4 border-[#1e73be] pl-6 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-2">
                 Academic Programs
               </h2>
@@ -209,7 +209,7 @@ const UniversityDetails = () => {
             (key) =>
               university[key] && (
                 <section key={key}>
-                  <div className="border-l-4 border-[#4ccedc] pl-6 mb-8">
+                  <div className="border-l-4 border-[#1e73be] pl-6 mb-8">
                     <h2 className="text-3xl font-bold text-gray-900 mb-2">
                       {key === "facility" ? "Facilities" : "Campus Facilities"}
                     </h2>
@@ -230,7 +230,7 @@ const UniversityDetails = () => {
                               key={i}
                               className="flex items-center space-x-3"
                             >
-                              <div className="w-2 h-2 bg-[#4ccedc] rounded-full flex-shrink-0"></div>
+                              <div className="w-2 h-2 bg-[#1e73be] rounded-full flex-shrink-0"></div>
                               <span className="text-gray-900 font-medium">
                                 {item}
                               </span>
@@ -239,7 +239,7 @@ const UniversityDetails = () => {
                             <div key={i} className="flex items-start space-x-3">
                               <div className="flex-shrink-0">
                                 <svg
-                                  className="h-6 w-6 text-[#4ccedc]"
+                                  className="h-6 w-6 text-[#1e73be]"
                                   fill="none"
                                   stroke="currentColor"
                                   viewBox="0 0 24 24"
@@ -277,7 +277,7 @@ const UniversityDetails = () => {
           {/* Admissions */}
           {university.admissions && (
             <section>
-              <div className="border-l-4 border-[#4ccedc] pl-6 mb-8">
+              <div className="border-l-4 border-[#1e73be] pl-6 mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">
                   Admissions
                 </h2>
@@ -303,11 +303,11 @@ const UniversityDetails = () => {
                     <h3 className="text-lg font-semibold text-gray-900 mb-4">
                       Application Window
                     </h3>
-                    <div className="bg-white p-6 rounded-lg border-l-4 border-[#4ccedc] text-center">
+                    <div className="bg-white p-6 rounded-lg border-l-4 border-[#1e73be] text-center">
                       <span className="text-xl font-semibold text-gray-900">
                         {university.admissions.applicationWindow.start || "-"}
                       </span>
-                      <span className="mx-4 text-[#4ccedc] text-2xl">→</span>
+                      <span className="mx-4 text-[#1e73be] text-2xl">→</span>
                       <span className="text-xl font-semibold text-gray-900">
                         {university.admissions.applicationWindow.end || "-"}
                       </span>
@@ -321,14 +321,14 @@ const UniversityDetails = () => {
           {/* Rankings */}
           {university.rankings && (
             <section>
-              <div className="border-l-4 border-[#4ccedc] pl-6 mb-8">
+              <div className="border-l-4 border-[#1e73be] pl-6 mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">
                   Rankings
                 </h2>
               </div>
               <div className="bg-gray-50 p-8 rounded-lg grid md:grid-cols-2 gap-8">
                 <div>
-                  <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                  <dt className="text-sm font-medium text-[#1e73be] uppercase tracking-wider mb-2">
                     National Ranking
                   </dt>
                   <dd className="text-xl font-semibold text-gray-900">
@@ -336,7 +336,7 @@ const UniversityDetails = () => {
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                  <dt className="text-sm font-medium text-[#1e73be] uppercase tracking-wider mb-2">
                     Global Ranking
                   </dt>
                   <dd className="text-xl font-semibold text-gray-900">
@@ -344,7 +344,7 @@ const UniversityDetails = () => {
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-sm font-medium text-[#4ccedc] uppercase tracking-wider mb-2">
+                  <dt className="text-sm font-medium text-[#1e73be] uppercase tracking-wider mb-2">
                     Source
                   </dt>
                   <dd className="text-xl font-semibold text-gray-900">
@@ -358,7 +358,7 @@ const UniversityDetails = () => {
           {/* Notes */}
           {university.notes && (
             <section>
-              <div className="border-l-4 border-[#4ccedc] pl-6 mb-8">
+              <div className="border-l-4 border-[#1e73be] pl-6 mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Notes</h2>
               </div>
               <div className="bg-gray-50 p-8 rounded-lg">

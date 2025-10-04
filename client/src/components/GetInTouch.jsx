@@ -4,17 +4,17 @@ const GetInTouch = () => {
   return (
     <>
       {/* Contact Section */}
-      <section className="py-16 sm:py-20 bg-[#4ccedc44]">
+      <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#242424]">
-              Get In <span className="text-[#4ccedc]">Touch</span>
+              Get In <span className="text-[#1e73be]">Touch</span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
               Ready to start your MBBS journey? Contact us today!
             </p>
-            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-[#4ccedc] to-[#4ccedc]/70 mx-auto mt-6 rounded"></div>
+            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-[#1e73be] to-[#1e73be]/70 mx-auto mt-6 rounded"></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
@@ -32,7 +32,7 @@ const GetInTouch = () => {
                   {/* Location */}
                   <div className="flex items-start p-4 sm:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                     <div className="mr-4">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-[#4ccedc] to-[#4ccedc]/70 rounded-full flex items-center justify-center">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-[#1e73be] to-[#1e73be]/70 rounded-full flex items-center justify-center">
                         <i className="ri-map-pin-fill text-white text-lg sm:text-xl"></i>
                       </div>
                     </div>
@@ -52,7 +52,7 @@ const GetInTouch = () => {
                   {/* Phone */}
                   <div className="flex items-start p-4 sm:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                     <div className="mr-4">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-[#4ccedc] to-[#4ccedc]/70 rounded-full flex items-center justify-center">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-[#1e73be] to-[#1e73be]/70 rounded-full flex items-center justify-center">
                         <i className="ri-phone-fill text-white text-lg sm:text-xl"></i>
                       </div>
                     </div>
@@ -63,7 +63,7 @@ const GetInTouch = () => {
                       <p className="text-sm sm:text-base mb-0">
                         <a
                           href="tel:+919667601325"
-                          className="text-[#4ccedc] font-semibold hover:text-[#242424] transition-colors"
+                          className="text-[#1e73be] font-semibold hover:text-[#242424] transition-colors"
                         >
                           +91 9667601325
                         </a>
@@ -78,7 +78,7 @@ const GetInTouch = () => {
                   {/* Email */}
                   <div className="flex items-start p-4 sm:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                     <div className="mr-4">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-[#4ccedc] to-[#4ccedc]/70 rounded-full flex items-center justify-center">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-[#1e73be] to-[#1e73be]/70 rounded-full flex items-center justify-center">
                         <i className="ri-mail-fill text-white text-lg sm:text-xl"></i>
                       </div>
                     </div>
@@ -89,7 +89,7 @@ const GetInTouch = () => {
                       <p className="text-sm sm:text-base mb-0">
                         <a
                           href="mailto:apnaeducation00@gmail.com"
-                          className="text-[#4ccedc] font-semibold hover:text-[#242424] transition-colors"
+                          className="text-[#1e73be] font-semibold hover:text-[#242424] transition-colors"
                         >
                           apnaeducation00@gmail.com
                         </a>
@@ -134,7 +134,7 @@ const GetInTouch = () => {
                           type="text"
                           id="name"
                           name="name"
-                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#4ccedc] focus:outline-none transition-colors text-sm sm:text-base"
+                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#1e73be] focus:outline-none transition-colors text-sm sm:text-base"
                           placeholder="Enter your full name"
                           required
                         />
@@ -147,7 +147,7 @@ const GetInTouch = () => {
                           type="tel"
                           id="phone"
                           name="phone"
-                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#4ccedc] focus:outline-none transition-colors text-sm sm:text-base"
+                          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#1e73be] focus:outline-none transition-colors text-sm sm:text-base"
                           placeholder="Enter your phone number"
                           required
                         />
@@ -163,7 +163,7 @@ const GetInTouch = () => {
                         type="email"
                         id="email"
                         name="email"
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#4ccedc] focus:outline-none transition-colors text-sm sm:text-base"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#1e73be] focus:outline-none transition-colors text-sm sm:text-base"
                         placeholder="Enter your email address"
                         required
                       />
@@ -178,7 +178,7 @@ const GetInTouch = () => {
                         id="message"
                         name="message"
                         rows="4"
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#4ccedc] focus:outline-none transition-colors resize-none text-sm sm:text-base"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#1e73be] focus:outline-none transition-colors resize-none text-sm sm:text-base"
                         placeholder="Tell us about your MBBS goals, preferred universities, or any specific questions..."
                       ></textarea>
                     </div>
@@ -186,7 +186,7 @@ const GetInTouch = () => {
                     {/* Submit */}
                     <button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-[#4ccedc] to-[#4ccedc]/70 text-white py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-bold text-sm sm:text-lg hover:from-[#4ccedc]/70 hover:to-[#4ccedc] transition-all duration-300 flex items-center justify-center"
+                      className="w-full bg-gradient-to-r from-[#1e73be] to-[#1e73be]/70 text-white py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-bold text-sm sm:text-lg hover:from-[#1e73be]/70 hover:to-[#1e73be] transition-all duration-300 flex items-center justify-center"
                     >
                       <i className="ri-send-plane-fill mr-2"></i>
                       Send Message

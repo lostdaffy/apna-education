@@ -2,12 +2,13 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+import { Link } from "react-router-dom";
 
+// Swiper styles import करें
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
   const slides = [
@@ -15,24 +16,21 @@ const Hero = () => {
       id: 1,
       image: "/images/1.jpg",
       title: "Study MBBS in India",
-      subtitle: "World-Class Medical Education at Affordable Costs",
     },
     {
       id: 2,
       image: "/images/2.jpg",
       title: "Study MBBS in Abroad",
-      subtitle: "International Medical Education Opportunities",
     },
     {
       id: 3,
       image: "/images/3.jpg",
       title: "Study MBBS by Experts",
-      subtitle: "Your Trusted Partner for MBBS Admission",
     },
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative h-[600px] sm:h-screen overflow-hidden">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         spaceBetween={0}
@@ -61,45 +59,32 @@ const Hero = () => {
         className="h-full w-full"
       >
         {slides.map((slide) => (
-          <SwiperSlide key={slide.id} className="relative min-h-screen">
+          <SwiperSlide key={slide.id} className="relative h-screen">
             {/* Background Image */}
             <div className="absolute inset-0 overflow-hidden">
-              {/* Background Image */}
               <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat transform transition-all duration-[8000ms] ease-out scale-110 hover:scale-125"
                 style={{ backgroundImage: `url(${slide.image})` }}
-              ></div>
-
+              />
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/70"></div>
+              <div className="absolute inset-0 bg-black/70" />
             </div>
 
             {/* Content */}
-            <div className="relative">
-              <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-                <div className="flex flex-col lg:flex-row justify-start pt-20">
-                  <div>
-                    <h1 className="md:max-w-2xl uppercase text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:txl mb-6 sm:mb-8 lg:mb-10 text-[#4ccedc] font-bold animate-slideInUp leading-tight sm:leading-snug md:leading-snug">
+            <div className="relative h-full flex items-center">
+              <div className="px-4 max-w-7xl mx-auto w-full">
+                <div className="flex items-center justify-start">
+                  <div className="space-y-6">
+                    <h1 className="max-w-5xl uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-semibold leading-tight sm:leading-snug md:leading-snug animate-slideUpFade">
                       {slide.title}
                     </h1>
-                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-50 animate-slideInUp delay-300 mb-6 sm:mb-8 lg:mb-10">
-                      {slide.subtitle}
-                    </h2>
-
-                    <div className="mt-8 sm:mt-10 lg:mt-20 gap-5 flex flex-col sm:flex-row  w-full">
+                    <div className="animate-slideUpFadeDelay">
                       <Link
                         to="/contact"
-                        className="w-full sm:w-auto text-center bg-gray-900 text-[#4ccedc] font-semibold text-sm sm:text-base rounded-full py-3 sm:py-3 px-6 sm:px-10 transition-all duration-500 transform hover:scale-110 hover:shadow-2xl hover:shadow-blue-500/30 animate-slideInUp delay-700 group inline-flex items-center justify-center"
+                        className="inline-flex items-center uppercase text-center bg-[#1e73be] hover:bg-[#1a66a3] text-white font-semibold text-base py-4 px-8 transition-all duration-300"
                       >
-                        <i className="ri-graduation-cap-line me-2"></i> Book Now
-                      </Link>
-
-                      <Link
-                        to="tel:919667601325"
-                        className="w-full sm:w-auto text-center bg-gray-900 text-[#4ccedc] font-semibold rounded-full py-3 sm:py-3 px-6 sm:px-10 hover:bg-gray-700 transition-colors flex items-center justify-center"
-                      >
-                        <i className="ri-phone-fill mr-2"></i>
-                        Call Now
+                        Book Now |
+                        <i className="ri-arrow-right-long-line ml-2"></i>
                       </Link>
                     </div>
                   </div>
@@ -110,37 +95,49 @@ const Hero = () => {
         ))}
       </Swiper>
 
-      {/* Navigation */}
-      <div className="hidden md:flex swiper-button-prev-custom absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 bg-white/15 hover:bg-white/25 rounded-full flex items-center justify-center cursor-pointer transition-all duration-500 backdrop-blur-md border border-white/20 group">
-        <svg
-          className="w-5 h-5 sm:w-6 sm:h-6 text-white transform transition-all duration-300 group-hover:scale-110 group-hover:-translate-x-0.5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 19l-7-7 7-7"
+      {/* Custom Pagination */}
+      <div className="swiper-pagination-custom absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            className="w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300 swiper-pagination-bullet"
           />
-        </svg>
+        ))}
       </div>
-      <div className="hidden md:flex swiper-button-next-custom absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 sm:w-14 sm:h-14 bg-white/15 hover:bg-white/25 rounded-full flex items-center justify-center cursor-pointer transition-all duration-500 backdrop-blur-md border border-white/20 group">
-        <svg
-          className="w-5 h-5 sm:w-6 sm:h-6 text-white transform transition-all duration-300 group-hover:scale-110 group-hover:translate-x-0.5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
-      </div>
+
+      {/* Custom CSS for animations */}
+      <style jsx>{`
+        @keyframes slideUpFade {
+          0% {
+            opacity: 0;
+            transform: translateY(50px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slideUpFadeDelay {
+          0% {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-slideUpFade {
+          animation: slideUpFade 1s ease-out forwards;
+        }
+
+        .animate-slideUpFadeDelay {
+          animation: slideUpFadeDelay 1.2s ease-out 0.3s forwards;
+          opacity: 0;
+        }
+      `}</style>
     </div>
   );
 };

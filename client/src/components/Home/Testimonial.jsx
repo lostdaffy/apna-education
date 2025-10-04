@@ -36,12 +36,12 @@ const Testimonial = () => {
           {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#242424]">
-              What <span className="text-[#4ccedc]">Students Say</span>
+              What <span className="text-[#1e73be]">Students Say</span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
               Success stories from our happy students who achieved their dreams
             </p>
-            <div className="w-16 sm:w-20 h-1 bg-[#4ccedc] mx-auto mt-6 rounded"></div>
+            <div className="w-16 sm:w-20 h-1 bg-[#1e73be] mx-auto mt-6 rounded"></div>
           </div>
 
           {/* Testimonials Grid */}
@@ -54,7 +54,7 @@ const Testimonial = () => {
                 {/* Quote Icon */}
                 <div className="absolute -top-4 left-6">
                   <div className="bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center">
-                    <i className="ri-double-quotes-l text-[#4ccedc] text-lg sm:text-xl"></i>
+                    <i className="ri-double-quotes-l text-[#1e73be] text-lg sm:text-xl"></i>
                   </div>
                 </div>
 
@@ -63,7 +63,7 @@ const Testimonial = () => {
                   {[...Array(5)].map((_, i) => (
                     <i
                       key={i}
-                      className="ri-star-fill text-[#4ccedc] mr-1 text-sm sm:text-base"
+                      className="ri-star-fill text-[#1e73be] mr-1 text-sm sm:text-base"
                     ></i>
                   ))}
                 </div>
@@ -75,7 +75,7 @@ const Testimonial = () => {
 
                 {/* Student Info */}
                 <div className="flex items-center">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 mr-4 bg-gradient-to-br from-[#4ccedc] to-[#4ccedc]/70 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 mr-4 bg-gradient-to-br from-[#1e73be] to-[#1e73be]/70 rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-sm sm:text-lg">
                       {testimonial.initials}
                     </span>

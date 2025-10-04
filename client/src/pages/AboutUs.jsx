@@ -92,12 +92,12 @@ const About = () => {
                 <h2 className="text-5xl md:text-6xl lg:text-6xl font-semibold">
                   <span className="text-gray-900">Who We Are</span>
                 </h2>
-                <div className="absolute -left-8 top-0 w-2 h-full bg-[#4ccedc]"></div>
+                <div className="absolute -left-8 top-0 w-2 h-full bg-[#1e73be]"></div>
               </div>
 
               <div className="space-y-6 text-gray-700">
                 <p className="text-xl leading-relaxed">
-                  <strong className="text-[#4ccedc]">ApnaEducation</strong> is a
+                  <strong className="text-[#1e73be]">ApnaEducation</strong> is a
                   leading educational consultancy specializing in MBBS
                   admissions for Indian students seeking quality medical
                   education both in India and abroad. Since our establishment in
@@ -137,7 +137,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-24 bg-[#4ccedc44] relative overflow-hidden">
+      <section className="py-24 bg-[#1e73be44] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Mission Card */}
@@ -148,11 +148,11 @@ const About = () => {
               id="mission-card"
             >
               <div className="bg-white h-full p-12 hover:transform hover:scale-105 transition-all duration-500">
-                <div className="border-b-4 border-[#4ccedc] pb-6 mb-8">
-                  <div className="w-20 h-20 bg-[#4ccedc] flex items-center justify-center mb-6">
+                <div className="border-b-4 border-[#1e73be] pb-6 mb-8">
+                  <div className="w-20 h-20 bg-[#1e73be] flex items-center justify-center mb-6">
                     <i className="ri-focus-2-line text-white text-3xl"></i>
                   </div>
-                  <h3 className="text-3xl font-bold text-[#4ccedc]">
+                  <h3 className="text-3xl font-bold text-[#1e73be]">
                     Our Mission
                   </h3>
                 </div>
@@ -175,11 +175,11 @@ const About = () => {
               id="vision-card"
             >
               <div className="bg-white h-full p-12 hover:transform hover:scale-105 transition-all duration-500">
-                <div className="border-b-4 border-[#4ccedc] pb-6 mb-8">
-                  <div className="w-20 h-20 bg-[#4ccedc] flex items-center justify-center mb-6">
+                <div className="border-b-4 border-[#1e73be] pb-6 mb-8">
+                  <div className="w-20 h-20 bg-[#1e73be] flex items-center justify-center mb-6">
                     <i className="ri-eye-line text-white text-3xl"></i>
                   </div>
-                  <h3 className="text-3xl font-bold text-[#4ccedc]">
+                  <h3 className="text-3xl font-bold text-[#1e73be]">
                     Our Vision
                   </h3>
                 </div>
@@ -209,7 +209,7 @@ const About = () => {
             <h2 className="text-5xl md:text-6xl lg:text-6xl font-semibold text-gray-900 mb-6">
               Why Choose Us
             </h2>
-            <div className="w-32 h-1 bg-[#4ccedc] mx-auto mb-6"></div>
+            <div className="w-32 h-1 bg-[#1e73be] mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               What sets us apart in the competitive world of education
               consultancy
@@ -222,14 +222,14 @@ const About = () => {
                 key={index}
                 
               >
-                <div className="h-full bg-white border-2 border-[#4ccedc] p-10 ">
-                  <div className="w-16 h-16 bg-[#4ccedc] flex items-center justify-center mb-8 group-hover:bg-white transition-colors">
+                <div className="h-full bg-white border-2 border-[#1e73be] p-10 ">
+                  <div className="w-16 h-16 bg-[#1e73be] flex items-center justify-center mb-8 group-hover:bg-white transition-colors">
                     <i
-                      className={`${feature.icon} text-white text-2xl group-hover:text-[#4ccedc] transition-colors`}
+                      className={`${feature.icon} text-white text-2xl group-hover:text-[#1e73be] transition-colors`}
                     ></i>
                   </div>
 
-                  <h3 className="text-2xl font-bold text-[#4ccedc] mb-6 group-hover:text-white transition-colors">
+                  <h3 className="text-2xl font-bold text-[#1e73be] mb-6 group-hover:text-white transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed group-hover:text-gray-300 transition-colors">

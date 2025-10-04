@@ -17,14 +17,14 @@ const PopularCountry = () => {
   ];
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#4ccedc44]">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Popular <span className="text-[#4ccedc]">Destinations</span>
+            Popular <span className="text-[#1e73be]">Destinations</span>
           </h2>
-          <div className="w-16 sm:w-20 h-1 bg-[#4ccedc] mx-auto"></div>
+          <div className="w-16 sm:w-20 h-1 bg-[#1e73be] mx-auto"></div>
         </div>
 
         {/* Countries Grid */}

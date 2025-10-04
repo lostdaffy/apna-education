@@ -11,17 +11,17 @@ const Partner = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 min-h-screen flex items-center bg-[#4ccedc44]">
+    <section className="py-16 sm:py-20 min-h-screen flex items-center bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-            Our <span className="text-[#4ccedc]">Partner Institutions</span>
+            Our <span className="text-[#1e73be]">Partner Institutions</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-800 max-w-2xl mx-auto">
             World-renowned universities and medical colleges we partner with
           </p>
-          <div className="w-16 sm:w-20 h-1 bg-[#4ccedc] mx-auto mt-6 rounded"></div>
+          <div className="w-16 sm:w-20 h-1 bg-[#1e73be] mx-auto mt-6 rounded"></div>
         </div>
 
         {/* Partners Grid */}

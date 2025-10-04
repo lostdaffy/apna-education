@@ -11,7 +11,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[#242424]">
-              Find <span className="text-[#4ccedc]">Our Office</span>
+              Find <span className="text-[#1e73be]">Our Office</span>
             </h2>
             <p className="text-lg text-gray-600">
               Visit us at our convenient location in Noida
@@ -41,7 +41,7 @@ const Contact = () => {
                 <div className="bg-white rounded-xl shadow-sm border-0 h-full">
                   <div className="p-6">
                     <div className="text-center mb-6">
-                      <div className="w-18 h-18 mx-auto mb-4 bg-[#4ccedc] rounded-full flex items-center justify-center">
+                      <div className="w-18 h-18 mx-auto mb-4 bg-[#1e73be] rounded-full flex items-center justify-center">
                         <i className="ri-building-line text-white text-3xl"></i>
                       </div>
                       <h4 className="font-bold text-[#242424] text-xl">
@@ -52,7 +52,7 @@ const Contact = () => {
                     <div className="space-y-6">
                       {/* Address */}
                       <div className="flex items-start">
-                        <i className="ri-map-pin-line text-[#4ccedc] mr-4 mt-1 text-xl flex-shrink-0"></i>
+                        <i className="ri-map-pin-line text-[#1e73be] mr-4 mt-1 text-xl flex-shrink-0"></i>
                         <div>
                           <div className="font-semibold text-gray-900 mb-1">
                             Address:
@@ -69,7 +69,7 @@ const Contact = () => {
 
                       {/* Office Hours */}
                       <div className="flex items-start">
-                        <i className="ri-time-line text-[#4ccedc] mr-4 mt-1 text-xl flex-shrink-0"></i>
+                        <i className="ri-time-line text-[#1e73be] mr-4 mt-1 text-xl flex-shrink-0"></i>
                         <div>
                           <div className="font-semibold mb-1">
                             Office Hours:
@@ -84,7 +84,7 @@ const Contact = () => {
 
                       {/* Additional Contact Info */}
                       <div className="flex items-start">
-                        <i className="ri-phone-line text-[#4ccedc] mr-4 mt-1 text-xl flex-shrink-0"></i>
+                        <i className="ri-phone-line text-[#1e73be] mr-4 mt-1 text-xl flex-shrink-0"></i>
                         <div>
                           <div className="font-semibold ] mb-1">
                             Contact:
@@ -106,7 +106,7 @@ const Contact = () => {
                           href="https://www.google.com/maps/dir//Shree+Ram+Palace,+Sector+27,+Noida,+Uttar+Pradesh+201301/@28.57152357569803,77.32450642528674,16z"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-full bg-[#4ccedc] text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors duration-300 flex items-center justify-center"
+                          className="w-full bg-[#1e73be] text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors duration-300 flex items-center justify-center"
                         >
                           <i className="ri-navigation-line mr-2"></i>
                           Get Directions

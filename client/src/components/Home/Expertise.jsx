@@ -34,7 +34,7 @@ const Expertise = () => {
           {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#242424]">
-              Our <span className="text-[#4ccedc]">Expertise</span>
+              Our <span className="text-[#1e73be]">Expertise</span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-4xl mx-auto">
               Empowering students with comprehensive guidance for their medical
@@ -47,7 +47,7 @@ const Expertise = () => {
             <div>
               <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-snug sm:leading-tight">
                 Your Trusted Partner in <br />
-                <span className="text-[#4ccedc]">Medical Education</span>
+                <span className="text-[#1e73be]">Medical Education</span>
               </h3>
 
               <div className="mb-6">
@@ -66,7 +66,7 @@ const Expertise = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {expertisePoints.map((point, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <i className={`${point.icon} text-[#4ccedc] text-xl sm:text-2xl`}></i>
+                    <i className={`${point.icon} text-[#1e73be] text-xl sm:text-2xl`}></i>
                     <span className="text-sm sm:text-base md:text-lg font-semibold text-gray-900">
                       {point.title}
                     </span>
