@@ -66,7 +66,7 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <nav className="sticky top-0 py-1 z-50 bg-[#242424] shadow-lg">
+      <nav className="sticky top-0 py-2 z-50 bg-[#242424] shadow-lg">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between">
             {/* Brand */}
@@ -288,7 +288,7 @@ const Navbar = () => {
                 {/* Mobile Apply Button */}
                 <li>
                   <Link
-                    to="/apply"
+                    to="/contact"
                     className="bg-[#353535] text-[#1e73be] font-semibold rounded-lg py-3 px-4 hover:bg-[#404040] transition-colors flex items-center justify-center w-full border border-[#1e73be]"
                     onClick={() => setIsMenuOpen(false)}
                   >
