@@ -1,5 +1,5 @@
 // components/HeroCarousel.jsx
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import { Link } from "react-router-dom";
@@ -11,16 +11,18 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 const Hero = () => {
+  const swiperRef = useRef(null);
+  
   const slides = [
     {
       id: 1,
       image: "/images/1.jpg",
-      title: "Study MBBS in India",
+      title: "Study MBBS in Abroad",
     },
     {
       id: 2,
       image: "/images/2.jpg",
-      title: "Study MBBS in Abroad",
+      title: "Study MBBS in India",
     },
     {
       id: 3,
@@ -29,9 +31,35 @@ const Hero = () => {
     },
   ];
 
+  // Animation restart function
+  const restartAnimations = (swiper) => {
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    if (activeSlide) {
+      // Remove animation classes
+      const titleElement = activeSlide.querySelector('.slide-title');
+      const buttonElement = activeSlide.querySelector('.slide-button');
+      
+      if (titleElement && buttonElement) {
+        titleElement.classList.remove('animate-slideUpFade');
+        buttonElement.classList.remove('animate-slideUpFadeDelay');
+        
+        // Force reflow
+        titleElement.offsetHeight;
+        buttonElement.offsetHeight;
+        
+        // Add animation classes back
+        setTimeout(() => {
+          titleElement.classList.add('animate-slideUpFade');
+          buttonElement.classList.add('animate-slideUpFadeDelay');
+        }, 50);
+      }
+    }
+  };
+
   return (
     <div className="relative h-[600px] sm:h-screen overflow-hidden">
       <Swiper
+        ref={swiperRef}
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         spaceBetween={0}
         slidesPerView={1}
@@ -57,8 +85,10 @@ const Hero = () => {
         touchRatio={1}
         threshold={10}
         className="h-full w-full"
+        onSlideChange={(swiper) => restartAnimations(swiper)}
+        onInit={(swiper) => restartAnimations(swiper)}
       >
-        {slides.map((slide) => (
+        {slides.map((slide, index) => (
           <SwiperSlide key={slide.id} className="relative h-screen">
             {/* Background Image */}
             <div className="absolute inset-0 overflow-hidden">
@@ -75,10 +105,10 @@ const Hero = () => {
               <div className="px-4 max-w-7xl mx-auto w-full">
                 <div className="flex items-center justify-start">
                   <div className="space-y-6">
-                    <h1 className="max-w-5xl uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-semibold leading-tight sm:leading-snug md:leading-snug animate-slideUpFade">
+                    <h1 className="slide-title max-w-5xl uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-semibold leading-tight sm:leading-snug md:leading-snug">
                       {slide.title}
                     </h1>
-                    <div className="animate-slideUpFadeDelay">
+                    <div className="slide-button">
                       <Link
                         to="/contact"
                         className="inline-flex items-center uppercase text-center bg-[#1e73be] hover:bg-[#1a66a3] text-white font-semibold text-base py-4 px-8 transition-all duration-300"

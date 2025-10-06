@@ -54,7 +54,7 @@ const Navbar = () => {
             {/* Right side - Apply button */}
             <div className="flex items-center gap-5">
               <Link
-                to="/apply"
+                to="/contact"
                 className="bg-[#1e73be] text-white font-semibold px-6 py-2 hover:bg-[#165a94] transition-colors flex items-center text-sm"
               >
                 <i className="ri-file-text-line mr-2"></i>
